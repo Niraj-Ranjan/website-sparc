@@ -1,0 +1,30 @@
+{
+    "name": "website-sparc",
+    "version": "1.0.0",
+    "description": "A website for SpArc Architects.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "debug": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dayshmookh/website-sparc.git"
+    },
+    "keywords": [
+        "website",
+        "sparc"
+    ],
+    "author": "Dayshmookh",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dayshmookh/website-sparc/issues"
+    },
+    "homepage": "https://github.com/dayshmookh/website-sparc#readme",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.3",
+        "pug": "^2.0.3"
+    }
+}
