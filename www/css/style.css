@@ -1,0 +1,14 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    background-color: grey.lighten-4
+}
+
+
+.screen-unit {
+    width: 100vw;
+    height: 100vh;
+}
+
+.screen-height {
+    height: 100vh;
+}
