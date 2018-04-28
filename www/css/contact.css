@@ -2,6 +2,7 @@
     background: url("/images/contact-bg.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -9,9 +10,12 @@
     background: rgba(255, 255, 255, 0.85);
     padding: 5em;
     min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
 }
 
-
+#row{
+    width: 1500px;
+}
 .screen-height {
     min-height: 100vh;
 }
