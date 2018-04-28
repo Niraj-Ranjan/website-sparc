@@ -8,7 +8,7 @@ var app = express();
 
 // ----- Configuration -----
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var routes = require("./routes.js");
 

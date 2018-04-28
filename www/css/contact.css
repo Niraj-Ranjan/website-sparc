@@ -1,0 +1,21 @@
+#page {
+    background: url("/images/contact-bg.jpg");
+    background-size: 75% 100%;
+    background-repeat: no-repeat;
+}
+
+
+#form-container {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 5em;
+    min-height: 100vh;
+}
+
+
+.screen-height {
+    min-height: 100vh;
+}
+
+.semi-bold {
+    font-weight: 700;
+}

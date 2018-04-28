@@ -1,0 +1,53 @@
+doctype html
+
+html
+
+
+    head
+        include ./head.pug
+
+        link(rel="stylesheet", type="text/css", href="/css/contact.css")
+
+    body.screen-height
+        #page.screen-height
+
+            .container
+
+
+                .row
+                    form.col.s6.push-s6#form-container
+                        h2.semi-bold.grey-text.text-darken-3 CONTACT
+                        .row
+                            .col.s6.input-field
+
+                                input#lname(type="text", name="name")
+                                label.semi-bold.grey-text.text-darken-3(for="name") Name
+
+
+                            .col.s6.input-field
+
+                                input#contact(type="text", name="contact")
+                                label.semi-bold.grey-text.text-darken-3(for="contact") Phone
+
+
+
+                        .row
+                            .col.s12.input-field
+
+                                input#lname(type="text",name="email")
+                                label.semi-bold.grey-text.text-darken-3(for="email") Email
+
+
+
+                        .row
+                            .col.s12.input-field
+
+                                input#lname(type="text",name="contact")
+                                label.semi-bold.grey-text.text-darken-3(for="message") Comment
+
+
+                        .row
+                           .btn.semi-bold.grey-text.text-darken-3.btn-flat.hoverable Submit
+
+                           .btn.semi-bold.grey-text.text-darken-3.right.btn-flat.hoverable Admin Login
+
