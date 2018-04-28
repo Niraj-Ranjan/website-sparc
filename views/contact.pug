@@ -7,47 +7,50 @@ html
         include ./head.pug
 
         link(rel="stylesheet", type="text/css", href="/css/contact.css")
+        link(href='https://fonts.googleapis.com/css?family=Raleway:100,300', rel='stylesheet')
+
 
     body.screen-height
         #page.screen-height
 
-            .container
+            div.container
 
 
-                .row
-                    form.col.s6.push-s6#form-container
-                        h2.semi-bold.grey-text.text-darken-3 CONTACT
-                        .row
-                            .col.s6.input-field
+                #row.row
+                    .col.s12m6.push-m6
+                        form#form-container
+                            h2.semi-bold.grey-text.text-darken-3 CONTACT
+                            .row
+                                .col.s6.input-field
 
-                                input#lname(type="text", name="name")
-                                label.semi-bold.grey-text.text-darken-3(for="name") Name
-
-
-                            .col.s6.input-field
-
-                                input#contact(type="text", name="contact")
-                                label.semi-bold.grey-text.text-darken-3(for="contact") Phone
+                                    input#lname(type="text", name="name")
+                                    label.semi-bold.grey-text.text-darken-3(for="name") Name
 
 
+                                .col.s6.input-field
 
-                        .row
-                            .col.s12.input-field
-
-                                input#lname(type="text",name="email")
-                                label.semi-bold.grey-text.text-darken-3(for="email") Email
+                                    input#contact(type="text", name="contact")
+                                    label.semi-bold.grey-text.text-darken-3(for="contact") Phone
 
 
 
-                        .row
-                            .col.s12.input-field
+                            .row
+                                .col.s12.input-field
 
-                                input#lname(type="text",name="contact")
-                                label.semi-bold.grey-text.text-darken-3(for="message") Comment
+                                    input#lname(type="text",name="email")
+                                    label.semi-bold.grey-text.text-darken-3(for="email") Email
 
 
-                        .row
-                           .btn.semi-bold.grey-text.text-darken-3.btn-flat.hoverable Submit
 
-                           .btn.semi-bold.grey-text.text-darken-3.right.btn-flat.hoverable Admin Login
+                            .row
+                                .col.s12.input-field
+
+                                    input#lname(type="text",name="contact")
+                                    label.semi-bold.grey-text.text-darken-3(for="message") Comment
+
+
+                            .row
+                               .btn.semi-bold.grey-text.text-darken-3.btn-flat.hoverable Submit
+
+                               .btn.semi-bold.grey-text.text-darken-3.right.btn-flat.hoverable Admin Login
 
