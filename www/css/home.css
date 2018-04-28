@@ -1,0 +1,228 @@
+#menufont {
+    font-family: 'Raleway', sans-serif;
+}
+
+#main {
+
+    overflow: hidden;
+}
+
+#imagecont {
+    width: 200px;
+}
+
+#image-logo {
+    align-content: center;
+    display: block;
+    margin-left: 45px;
+}
+
+/*
+hr {
+    width: 200px;
+}
+*/
+
+#line {
+    width: 100%;
+}
+
+
+#about-container {
+    background-color: dimgray;
+    width: 100%;
+
+}
+
+#define {
+
+    font-family: 'Raleway', sans-serif;
+
+}
+
+#define-1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#define-2 {
+    width: 75%;
+}
+
+#bodywrap {
+    font-family: 'Raleway', sans-serif;
+    padding: 25px;
+    height: 200px;
+    width: 100%;
+    background-color: #cfd8dc;
+    color: #808080;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*-=-=-=-=-=-=-=-=-=-=-=- */
+
+/* Column Grids */
+
+/*-=-=-=-=-=-=-=-=-=-=-=- */
+
+.col_half {
+    width: 49%;
+}
+
+.col_third {
+    width: 32%;
+}
+
+.col_fourth {
+    width: 18%;
+}
+
+.col_fifth {
+    width: 18.4%;
+}
+
+.col_sixth {
+    width: 15%;
+}
+
+.col_three_fourth {
+    width: 74.5%;
+}
+
+.col_twothird {
+    width: 66%;
+}
+
+.col_half,
+.col_third,
+.col_twothird,
+.col_fourth,
+.col_three_fourth,
+.col_fifth {
+    position: relative;
+    display: inline;
+    display: inline-block;
+    float: left;
+    margin-left: 12%;
+    margin-bottom: 20px;
+}
+
+.end {
+    margin-right: 0 !important;
+}
+
+/* Column Grids End */
+
+#bodywrap {
+    width: 980px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.counter {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    color: #4ad1e5;
+}
+
+
+/*cards*/
+
+#two {
+
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    height: 350px;
+
+
+}
+
+#one {
+    text-align: center;
+    height: 150px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+}
+
+.boxA,
+.boxB,
+.boxC {
+    width: 384px;
+    margin-left: 2px;
+
+}
+
+#boxa {
+    background-color: red;
+}
+
+.boxA,
+.boxB {
+    float: left;
+    margin-right: 20px;
+}
+
+.boxC {
+    float: right;
+}
+
+#workingfield {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#fieldtitle {
+    font-size: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 1em 2em 1em 2em;
+    letter-spacing: 0.10em;
+    margin-top: 2em;
+    padding: 1.40em 3em;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    color: #FFF;
+}
+
+.button-alt {
+    padding: 1em 2em;
+    border-color: rgba(0, 0, 0, .8);
+    color: rgba(0, 0, 0, .8);
+}
+
+#row1 {
+    height: 500px;
+    overflow: hidden;
+
+}
