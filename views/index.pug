@@ -3,7 +3,140 @@ html
     head
         title SpArc
         include ./head.pug
+        link(type="text/css", rel="stylesheet", href="/css/home.css")
+
     body
+
         include ./menu.pug
-        h1#header.center Welcome to SpArc!
-        p.center Website under construction!
+
+
+
+        .screen-unit#hero
+            .screen-height.valign-wrapper
+                .container
+                    h1#header.center Welcome to SpArc!
+                    p.center Website under construction!
+
+
+
+        #main.screen-unit.grey.lighten-5
+            .container
+                article
+                br
+                header#about-container.special.container.grey.lighten-5
+                p
+                  br
+                  br
+                  br
+                  br
+                hr#line
+                h2#define.center About
+                    strong Sp
+                    span.yellow-text.text-lighten-2 Arc
+                hr
+                #define-2.container
+                    p#define-1
+                        br
+                        | SpArc Associates is a Nagpur-based collaborative firm for architectural, landscape and interior designing by a group of young creatively enthusiastic architects.
+                        br
+                        | The firm works on a wide array of projects ranging from building architecture to landscape and interior designs.
+                        br
+                        br
+                hr#line
+                br
+                br
+                .wrapper#bodywrap
+                    .counter.col_fourth
+                        i.fa.fa-code.fa-2x
+                        h2.timer.count-title.count-number(data-to='300', data-speed='1500')
+                        p.count-text Project
+                    .counter.col_fourth
+                        i.fa.fa-coffee.fa-2x
+                        h2.timer.count-title.count-number(data-to='1700', data-speed='1500')
+                        p.count-text Clients
+                    .counter.col_fourth
+                        i.fa.fa-lightbulb-o.fa-2x
+                        h2.timer.count-title.count-number(data-to='11900', data-speed='1500')
+                        p.count-text ideas
+        .screen-unit#bodypage
+            br
+            br
+            br
+            #row1.row
+                #one.col.s12
+                    br
+                    strong(id='working field') Our Working Field
+                    br
+                    hr(style='width: 1200px;')
+                    i.fa.fa-neuter
+                    |   Architecture
+                    i.fa.fa-neuter
+                    |   Interior Designing
+                    i.fa.fa-neuter
+                    |   Landscaping
+    #main.container
+        .row
+            br
+            br
+            .col.s12.m4
+                .card
+                    .card-image.waves-effect.waves-block.waves-light
+                        img.activator(src='images/four.jpg')
+                    .card-content
+                        span.card-title.center.activator.grey-text.text-darken-4 Architecture
+                    .card-reveal.white.lighten-4.black-text
+                        span.card-title.center Architecture
+                    p
+                        table.centered.highlight
+                            tbody
+                                tr
+                                  td
+                                    a(href='#') Farm House
+                                tr
+                                  td
+                                    a(href='#') Bunglows
+                                tr
+                                  td
+                                    a(href='#') Commercial
+            .col.s12.m4
+                .card
+                    .card-image.waves-effect.waves-block.waves-light
+                        img.activator(src='images/four.jpg')
+                    .card-content
+                        span.card-title.activator.center.grey-text.text-darken-4 Interior
+                    .card-reveal.white.lighten-4.black-text
+                        span.card-title.grey-text.text-darken-4.center Interior
+                        table.centered.highlight
+                            tbody
+                                tr
+                                    td
+                                        a(href='#') Farm House
+                                tr
+                                    td
+                                        a(href='#') Bunglows
+                                tr
+                                    td
+                                        a(href='#') Commercial
+            .col.s12.m4
+                .card
+                    .card-image.waves-effect.waves-block.waves-light
+                        img.activator(src='images/four.jpg')
+                    .card-content
+                        span.card-title.activator.grey-text.center.text-darken-4 Landscaping
+                    .card-reveal.white.lighten-4.black-text
+                        span.card-title.grey-text.text-darken-4.center Landscaping
+                    table.centered.highlight
+                        tbody
+                            tr
+                                td
+                                    a(href='#') Farm House
+                            tr
+                                td
+                                    a(href='#') Bunglows
+                            tr
+                                td
+                                  a(href='#') Commercial
+
+script(src="/js/menu.js")
+script(src="/js/countup.js")
+
