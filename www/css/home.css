@@ -2,6 +2,9 @@
     font-family: 'Raleway', sans-serif;
 }
 
+#lineone{
+    width: 150px;
+}
 #main {
 
     overflow: hidden;
@@ -29,7 +32,7 @@ hr {
 
 
 #about-container {
-    background-color: dimgray;
+    background-color: #f5f5f5 ;
     width: 100%;
 
 }
@@ -51,10 +54,10 @@ hr {
 
 #bodywrap {
     font-family: 'Raleway', sans-serif;
-    padding: 25px;
+    padding: 20px;
     height: 200px;
     width: 100%;
-    background-color: #cfd8dc;
+    background-color: #f5f5f5 ;
     color: #808080;
     overflow: hidden;
     text-align: center;
@@ -153,15 +156,6 @@ hr {
 
 /*cards*/
 
-#two {
-
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    height: 350px;
-
-
-}
-
 #one {
     text-align: center;
     height: 150px;
@@ -169,60 +163,62 @@ hr {
     font-family: 'Raleway', sans-serif;
     letter-spacing: 2px;
 }
-
-.boxA,
-.boxB,
-.boxC {
-    width: 384px;
-    margin-left: 2px;
-
-}
-
-#boxa {
-    background-color: red;
-}
-
-.boxA,
-.boxB {
-    float: left;
-    margin-right: 20px;
-}
-
-.boxC {
-    float: right;
-}
-
 #workingfield {
     font-size: 20px;
     font-weight: 400;
+        text-align: center;
+    letter-spacing: 2px;
 }
 
 #fieldtitle {
     font-size: 30px;
 }
 
-.button {
-    display: inline-block;
-    padding: 1em 2em 1em 2em;
-    letter-spacing: 0.10em;
-    margin-top: 2em;
-    padding: 1.40em 3em;
-    border: 2px solid rgba(255, 255, 255, 1);
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1em;
-    color: #FFF;
-}
-
-.button-alt {
-    padding: 1em 2em;
-    border-color: rgba(0, 0, 0, .8);
-    color: rgba(0, 0, 0, .8);
-}
-
 #row1 {
-    height: 500px;
+
     overflow: hidden;
 
+}
+
+#three{
+    text-align: center;
+    word-spacing: 2px;
+    align-content: center;
+}
+
+#pic{
+  min-height: 100%;
+  height: 100%;
+    width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#backimage {
+  width: 110%;
+  height: 300%;
+    width: 400%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-image: url(/images/architecture-bay-bridge-356830.jpg);
+}
+
+/* Not needed styles */
+
+#name{
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+
+  font-family: 'Raleway', sans-serif;
+  z-index: 9;
+  font-size: 150px;
+    font-weight: 100;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+          transform: translate3d(-50%,-50%,0);
 }
