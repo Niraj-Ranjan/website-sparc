@@ -1,4 +1,4 @@
-#first {
+#panel-1 {
    background: url("/images/parallax.jpg") fixed;
 }
 
@@ -6,3 +6,31 @@
    background: url("/images/parallax1.jpg") fixed;
 }
 
+#intro-head {
+    font-size: 15em;
+    border: 0.05em solid white;
+    font-weight: 500;
+}
+
+#banner-1 {
+    width: 110%;
+    left: -5%;
+}
+
+
+
+.padded {
+    padding: 1em;
+}
+
+.strong {
+    font-weight: 600;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
