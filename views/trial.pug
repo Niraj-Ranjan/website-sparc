@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        title SpArc
+        include ./head.pug
+
+        link(type="text/css", rel="stylesheet", href="/css/trial.css")
+
+    body
+
+        include ./menu.pug
+
+        #first
+
+            .container
+                .full-width.screen-height.valign-wrapper
+                    .container
+                        h1.center.hero-head SpArc
+
+        .container.section
+            h1.center heading
+            .full-width.card.blue.lighten-5
+                h1.center some text
+            p some text
+
+        #second.screen-height.valign-wrapper
+            .container
+                .row
+                    .col.s10.push-s1.m4
+                        .card.small
+                    .col.s10.push-s1.m4
+                        .card.small
+                    .col.s10.push-s1.m4
+                        .card.small
+
+
+
+        footer.page-footer.brown.lighten-1
+            .container
+                .row
+                    .col.s6
+                        p k
+                        p k
+                        p k
+                        p k
+
+            .footer-copyright
+                .container © 2014 Copyright Text
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js", type="text/javascript")
+        script(src="/js/trial.js", type="text/javascript")
+
+
