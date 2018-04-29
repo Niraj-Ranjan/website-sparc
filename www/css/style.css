@@ -1,8 +1,6 @@
-* {
-    font-family: 'Raleway', sans-serif;
-    background-color: grey.lighten-4
+body {
+    font-family: "Raleway" !important;
 }
-
 
 .screen-unit {
     width: 100vw;
