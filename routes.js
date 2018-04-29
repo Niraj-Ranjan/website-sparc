@@ -11,6 +11,10 @@ router.get('/contact', function (req, res) {
     res.render('contact');
 });
 
+router.get('/trial', function (req, res) {
+    res.render('trial');
+});
+
 
 
 
