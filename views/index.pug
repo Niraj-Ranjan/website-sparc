@@ -4,8 +4,9 @@ html
         title SpArc
         include ./head.pug
         link(type="text/css", rel="stylesheet", href="/css/home.css")
+        link(type="text/css", rel="stylesheet", href="/css/style.css")
 
-    body
+    body.grey.lighten-4
 
         .screen-unit#hero
             .screen-height.valign-wrapper
@@ -13,34 +14,25 @@ html
                     h1#header.center Welcome to SpArc!
                     p.center Website under construction!
 
-        include ./menu.pug
+        // include ./menu.pug
 
-        #main.screen-unit.grey.lighten-5
+        #main.screen-unit
+            hr
             .container
                 article
-                br
                 header#about-container.special.container.grey.lighten-5
                 p
-                  br
-                  br
-                  br
-                  br
-                hr#line
                 h2#define.center About
                     strong Sp
                     span.yellow-text.text-lighten-2 Arc
-                hr
+                hr#lineone
                 #define-2.container
                     p#define-1
                         br
                         | SpArc Associates is a Nagpur-based collaborative firm for architectural, landscape and interior designing by a group of young creatively enthusiastic architects.
                         br
                         | The firm works on a wide array of projects ranging from building architecture to landscape and interior designs.
-                        br
-                        br
-                hr#line
-                br
-                br
+
                 .wrapper#bodywrap
                     .counter.col_fourth
                         i.fa.fa-code.fa-2x
@@ -54,54 +46,31 @@ html
                         i.fa.fa-lightbulb-o.fa-2x
                         h2.timer.count-title.count-number(data-to='11900', data-speed='1500')
                         p.count-text ideas
-        .screen-unit#bodypage
-            br
-            br
-            br
             #row1.row
                 #one.col.s12
                     br
-                    strong(id='working field') Our Working Field
-                    br
-                    hr(style='width: 1200px;')
-                    i.fa.fa-neuter
-                    |   Architecture
-                    i.fa.fa-neuter
-                    |   Interior Designing
-                    i.fa.fa-neuter
-                    |   Landscaping
+                    #workingfield.p Our Working Field
+                        br
+                        hr(style='width: 1200px;')
+                        i.fa.fa-neuter
+                        |   Architecture
+                        i.fa.fa-neuter
+                        |   Interior Designing
+                        i.fa.fa-neuter
+                        |   Landscaping
     #main.container
-        .row
-            br
-            br
-            .col.s12.m4
-                .card
-                    .card-image.waves-effect.waves-block.waves-light
-                        img.activator(src='images/four.jpg')
-                    .card-content
-                        span.card-title.center.activator.grey-text.text-darken-4 Architecture
-                    .card-reveal.white.lighten-4.black-text
-                        span.card-title.center Architecture
+    .row
+        .col.s12.m4
+            .card
+                .card-image.waves-effect.waves-block.waves-light
+                    img.activator(src='images/architecture.jpg')
+                .card-content
+                    span.card-title.center.activator.grey-text.text-darken-4 Architecture
+                .card-reveal.white.lighten-4.black-text
+                    span.card-title.center
+                        | Architecture
+                        i.material-icons.right close
                     p
-                        table.centered.highlight
-                            tbody
-                                tr
-                                  td
-                                    a(href='#') Farm House
-                                tr
-                                  td
-                                    a(href='#') Bunglows
-                                tr
-                                  td
-                                    a(href='#') Commercial
-            .col.s12.m4
-                .card
-                    .card-image.waves-effect.waves-block.waves-light
-                        img.activator(src='images/four.jpg')
-                    .card-content
-                        span.card-title.activator.center.grey-text.text-darken-4 Interior
-                    .card-reveal.white.lighten-4.black-text
-                        span.card-title.grey-text.text-darken-4.center Interior
                         table.centered.highlight
                             tbody
                                 tr
@@ -113,14 +82,16 @@ html
                                 tr
                                     td
                                         a(href='#') Commercial
-            .col.s12.m4
-                .card
-                    .card-image.waves-effect.waves-block.waves-light
-                        img.activator(src='images/four.jpg')
-                    .card-content
-                        span.card-title.activator.grey-text.center.text-darken-4 Landscaping
-                    .card-reveal.white.lighten-4.black-text
-                        span.card-title.grey-text.text-darken-4.center Landscaping
+        .col.s12.m4
+            .card
+                .card-image.waves-effect.waves-block.waves-light
+                    img.activator(src='images/interior.jpg')
+                .card-content
+                    span.card-title.activator.center.grey-text.text-darken-4 Interior
+                .card-reveal.white.lighten-4.black-text
+                    span.card-title.grey-text.text-darken-4.center
+                        | Interior
+                        i.material-icons.right close
                     table.centered.highlight
                         tbody
                             tr
@@ -131,7 +102,33 @@ html
                                     a(href='#') Bunglows
                             tr
                                 td
-                                  a(href='#') Commercial
+                                    a(href='#') Commercial
+        .col.s12.m4
+            .card
+                .card-image.waves-effect.waves-block.waves-light
+                    img.activator(src='images/landscaping.jpg')
+                .card-content
+                    span.card-title.activator.grey-text.center.text-darken-4 Landscaping
+                .card-reveal.white.lighten-4.black-text
+                    span.card-title.grey-text.text-darken-4.center
+                        | Landscaping
+                        i.material-icons.right close
+                    table.centered.highlight
+                        tbody
+                            tr
+                                td
+                                    a(href='#') Farm House
+                            tr
+                                td
+                                    a(href='#') Bunglows
+                            tr
+                                td
+                                    a(href='#') Commercial
+    #maain.screen-unit
+        #pic.container
+            #name.p SpArc
+                #backimage.background-image
 
-script(src="/js/menu.js")
+script(src='js/pic.js')
+
 script(src="/js/countup.js")
