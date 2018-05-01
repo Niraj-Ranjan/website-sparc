@@ -15,6 +15,9 @@ router.get('/trial', function (req, res) {
     res.render('trial');
 });
 
+router.get('/homepage', function (req, res) {
+    res.render('homepage');
+});
 
 
 
