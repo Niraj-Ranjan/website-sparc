@@ -6,6 +6,10 @@
    background: url("/images/parallax1.jpg") fixed;
 }
 
+#first {
+   background: url("/images/parallax.jpg") fixed;
+}
+
 #intro-head {
     font-size: 15em;
     border: 0.05em solid white;
