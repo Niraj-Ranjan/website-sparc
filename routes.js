@@ -19,6 +19,10 @@ router.get('/homepage', function (req, res) {
     res.render('homepage');
 });
 
+router.get('/ec', function (req, res) {
+    res.render('ec');
+});
+
 
 
 
