@@ -1,0 +1,131 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Parallax Template - Materialize
+    // CSS
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Raleway:300', rel='stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='css/materialize.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='css/style.css', type='text/css', rel='stylesheet', media='screen,projection')
+    link(href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', rel='stylesheet')
+    script(src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js')
+  body
+    nav.white(role='navigation')
+      .nav-wrapper.container
+        a#logo-container.brand-logo(href='#') Logo
+        ul.right.hide-on-med-and-down
+          li
+            a(href='#') Navbar Link
+        ul#nav-mobile.sidenav
+          li
+            a(href='#') Navbar Link
+        a.sidenav-trigger(href='#', data-target='nav-mobile')
+          i.material-icons menu
+    #index-banner.parallax-container
+      .section.no-pad-bot
+        .container
+          br
+          br
+          br
+          br
+      .parallax
+        img(src='images/art-background-decoration-354939.jpg', alt='Unsplashed background img 1')
+    .container
+      .section
+        // Icon Section
+        .row
+          .col.s12.m4
+            .icon-block
+              h2.center.brown-text
+                img(src='https://png.icons8.com/ios/50/000000/home.png')
+              h5.center Architecture
+              p.light Architecture starts when you carefully put two bricks together. There is begins.
+          .col.s12.m4
+            .icon-block
+              h2.center.brown-text
+                img(src='https://png.icons8.com/ios/50/000000/menu.png')
+              h5.center Interior
+              p.light Interior is the natural projection of the soul
+          .col.s12.m4
+            .icon-block
+              h2.center.brown-text
+                img(src='https://png.icons8.com/ios/50/000000/grass.png')
+              h5.center Landscaping
+              p.light In all things of nature there is something of the Marvelous
+    .parallax-container.valign-wrapper
+      .section.no-pad-bot
+        .container
+          .row.center
+            img(src='images/white-transparent.png')
+      .parallax
+        img(src='images/new_york_usa_city_top_view_119306_3840x2160.jpg', alt='Unsplashed background img 2')
+    .container
+      .section
+        .row
+          .col.s12.center
+            h3
+              i.mdi-content-send.brown-text
+            h4 About Us
+            hr(style='width: 275px;')
+            p.left-align.light
+              | SpArc Associates is a Nagpur-based collaborative firm for architectural, landscape and interior designing by a group of young creatively enthusiastic architects. The firm works on a wide array of projects ranging from building architecture to landscape and interior designs.
+    .parallax-container.valign-wrapper
+      .section.no-pad-bot
+        .container
+          .row.center
+      .parallax
+        img(src='images/lamps.jpg', alt='Unsplashed background img 3')
+    .container
+      .section
+        .row
+          .col.s12.center
+            h3
+              i.mdi-content-send.brown-text
+            h4 Products
+            hr(style='width: 175px;')
+            p#products.center-align.light(style='word-spacing: 20px;')
+              img(src='icons8-blockchain-new-logo-50.png')
+              |   Lamps
+              img(src='icons8-blockchain-new-logo-50.png')
+              |   Furniture
+              img(src='images/icons8-blockchain-new-logo-50.png')
+              |   Ceiling Art
+    .parallax-container.valign-wrapper
+      .parallax
+        img(src='images/chuttersnap-517707-unsplash.jpg', alt='Unsplashed background img 3')
+    footer.page-footer.teal
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Company Bio
+            p.grey-text.text-lighten-4
+              | We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
+          .col.l3.s12
+            h5.white-text Settings
+            ul
+              li
+                a.white-text(href='#!') Link 1
+              li
+                a.white-text(href='#!') Link 2
+              li
+                a.white-text(href='#!') Link 3
+              li
+                a.white-text(href='#!') Link 4
+          .col.l3.s12
+            h5.white-text Connect
+            ul
+              li
+                a.white-text(href='#!') Link 1
+              li
+                a.white-text(href='#!') Link 2
+              li
+                a.white-text(href='#!') Link 3
+              li
+                a.white-text(href='#!') Link 4
+    // Scripts
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='js/materialize.js')
+    script(src='js/init.js')
