@@ -24,7 +24,7 @@ router.get('/homepage', function (req, res) {
 });
 
 router.get('/ec', function (req, res) {
-    res.render('ec');
+    res.render('e-comm');
 });
 
 
