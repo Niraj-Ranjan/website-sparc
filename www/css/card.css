@@ -1,0 +1,29 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10);
+    max-width: 300px;
+    margin: 30px;
+    text-align: center;
+}
+
+
+.title {
+    color: black;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 25px;
+    color: hotpink;
+}
+
+
+img {
+    margin: 13px;
+    border-radius: 100%;
+}
+
+
+.semi-bold {
+    font-weight: 700;
+}
