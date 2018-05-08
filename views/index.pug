@@ -1,141 +1,104 @@
 doctype html
 html
     head
-        title SpArc
-        include ./head.pug
-        link(type="text/css", rel="stylesheet", href="/css/home.css")
-        link(type="text/css", rel="stylesheet", href="/css/style.css")
 
-    body.grey.lighten-4
+        title Welcome | SpArc
+        include ./head.pug
+
+        link(type="text/css", rel="stylesheet", href="/css/home.css")
+
+
+    body
 
         include ./menu.pug
 
-
-
-        .screen-unit#hero
-            .screen-height.valign-wrapper
-                .container
-                    h1#header.center Welcome to SpArc!
-                    p.center Website under construction!
-
-
-        #main.screen-unit
-            hr
+        .parallax-container.screen-height.valign-wrapper
             .container
-                article
-                header#about-container.special.container.grey.lighten-5
-                p
-                h2#define.center About
-                    strong Sp
-                    span.yellow-text.text-lighten-2 Arc
-                hr#lineone
-                #define-2.container
-                    p#define-1
-                        br
-                        | SpArc Associates is a Nagpur-based collaborative firm for architectural, landscape and interior designing by a group of young creatively enthusiastic architects.
-                        br
-                        | The firm works on a wide array of projects ranging from building architecture to landscape and interior designs.
+                .row
+                    img#intro-head.col.s10.push-s1.m8.push-m2.l6.push-l3(src='/images/logos/white-transparent.png')
+            .parallax
+                img(src='/images/art-background-decoration-354939.jpg', alt='Unsplashed background img 1')
 
-                .wrapper#bodywrap
-                    .counter.col_fourth
-                        i.fa.fa-code.fa-2x
-                        h2.timer.count-title.count-number(data-to='300', data-speed='1500')
-                        p.count-text Project
-                    .counter.col_fourth
-                        i.fa.fa-coffee.fa-2x
-                        h2.timer.count-title.count-number(data-to='1700', data-speed='1500')
-                        p.count-text Clients
-                    .counter.col_fourth
-                        i.fa.fa-lightbulb-o.fa-2x
-                        h2.timer.count-title.count-number(data-to='11900', data-speed='1500')
-                        p.count-text ideas
-            #row1.row
-                #one.col.s12
-                    br
-                    #workingfield.p Our Working Field
-                        br
-                        hr(style='width: 1200px;')
-                        i.fa.fa-neuter
-                        |   Architecture
-                        i.fa.fa-neuter
-                        |   Interior Designing
-                        i.fa.fa-neuter
-                        |   Landscaping
-    #main.container
-    .row
-        .col.s12.m4
-            .card
-                .card-image.waves-effect.waves-block.waves-light
-                    img.activator(src='images/architecture.jpg')
-                .card-content
-                    span.card-title.center.activator.grey-text.text-darken-4 Architecture
-                .card-reveal.white.lighten-4.black-text
-                    span.card-title.center
-                        | Architecture
-                        i.material-icons.right close
-                    p
-                        table.centered.highlight
-                            tbody
-                                tr
-                                    td
-                                        a(href='#') Farm House
-                                tr
-                                    td
-                                        a(href='#') Bunglows
-                                tr
-                                    td
-                                        a(href='#') Commercial
-        .col.s12.m4
-            .card
-                .card-image.waves-effect.waves-block.waves-light
-                    img.activator(src='images/interior.jpg')
-                .card-content
-                    span.card-title.activator.center.grey-text.text-darken-4 Interior
-                .card-reveal.white.lighten-4.black-text
-                    span.card-title.grey-text.text-darken-4.center
-                        | Interior
-                        i.material-icons.right close
-                    table.centered.highlight
-                        tbody
-                            tr
-                                td
-                                    a(href='#') Farm House
-                            tr
-                                td
-                                    a(href='#') Bunglows
-                            tr
-                                td
-                                    a(href='#') Commercial
-        .col.s12.m4
-            .card
-                .card-image.waves-effect.waves-block.waves-light
-                    img.activator(src='images/landscaping.jpg')
-                .card-content
-                    span.card-title.activator.grey-text.center.text-darken-4 Landscaping
-                .card-reveal.white.lighten-4.black-text
-                    span.card-title.grey-text.text-darken-4.center
-                        | Landscaping
-                        i.material-icons.right close
-                    table.centered.highlight
-                        tbody
-                            tr
-                                td
-                                    a(href='#') Farm House
-                            tr
-                                td
-                                    a(href='#') Bunglows
-                            tr
-                                td
-                                    a(href='#') Commercial
-    #maain.screen-unit
-        #pic.container
-            #name.p SpArc
-                #backimage.background-image
+        .container
+            .section
+                // Icon Section
+                .row
+                    .col.s12.m4
+                        .card
+                            .card-image.waves-effect.waves-block.waves-light
+                                img.activator(src="/images/architecture.jpg")
+                            .card-content
+                                span.card-title.center.activator.grey-text.text-darken-4 Architecture
+                            .card-reveal.white.lighten-4.black-text
+                                span.card-title.center Architecture
+                                    i.material-icons.right close
+                                .collection.center
+                                    a.collection-item(href='#') Farm House
+                                    a.collection-item(href='#') Bunglows
+                                    a.collection-item(href='#') Commercial
+                    .col.s12.m4
+                        .card
+                            .card-image.waves-effect.waves-block.waves-light
+                                img.activator(src="/images/interior.jpg")
+                            .card-content
+                                span.card-title.activator.center.grey-text.text-darken-4 Interior
+                            .card-reveal.white.lighten-4.black-text
+                                span.card-title.center Interior
+                                    i.material-icons.right close
+                                .collection.center
+                                    a.collection-item(href='#') Farm House
+                                    a.collection-item(href='#') Bunglows
+                                    a.collection-item(href='#') Commercial
+                    .col.s12.m4
+                        .card
+                            .card-image.waves-effect.waves-block.waves-light
+                                img.activator(src="/images/landscaping.jpg")
+                            .card-content
+                                span.card-title.activator.grey-text.center.text-darken-4 Landscaping
+                            .card-reveal.white.lighten-4.black-text
+                                span.card-title.center Landscaping
+                                    i.material-icons.right close
+                                .collection.center
+                                    a.collection-item(href='#') Farm House
+                                    a.collection-item(href='#') Bunglows
+                                    a.collection-item(href='#') Commercial
 
-script(src='js/pic.js')
+        .parallax-container.valign-wrapper
+            .parallax
+                img(src='/images/new_york_usa_city_top_view_119306_3840x2160.jpg', alt='Unsplashed background img 2')
 
-script(src="/js/countup.js")
-script(src="/js/home.js")
+        .container
+            .section
+                .row
+                    .col.s12
+                        h4.center About Us
+                        p.left-align.light.center SpArc Associates is a Nagpur-based collaborative firm for architectural, landscape and interior designing by a group of young creatively enthusiastic architects. The firm works on a wide array of projects ranging from building architecture to landscape and interior designs.
 
+        .parallax-container.valign-wrapper
+            .parallax
+                img(src='/images/lamps.jpg', alt='Unsplashed background img 3')
 
+        .container
+            .section
+                .row
+                    .col.s12.center
+                        h4 Products
+                    .col.s4.center
+                        img(src='/images/icons8-blockchain-new-logo-50.png')
+                        | Lamps
+                    .col.s4.center
+                        img(src='/images/icons8-blockchain-new-logo-50.png')
+                        | Furniture
+                    .col.s4.center
+                        img(src='/images/icons8-blockchain-new-logo-50.png')
+                        | Ceiling Art
 
+        .parallax-container.valign-wrapper
+            .parallax
+                img(src='/images/chuttersnap-517707-unsplash.jpg', alt='Unsplashed background img 3')
+
+        include ./footer.pug
+
+        script(src="/js/tilt.jquery.min.js")
+
+        script(src='/js/home.js')
