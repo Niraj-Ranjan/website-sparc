@@ -11,12 +11,12 @@ router.get('/contact', function (req, res) {
     res.render('contact');
 });
 
-router.get('/trial', function (req, res) {
-    res.render('trial');
-});
-
 router.get('/about', function (req, res) {
     res.render('about');
+});
+
+router.get('/trial', function (req, res) {
+    res.render('trial');
 });
 
 router.get('/homepage', function (req, res) {
