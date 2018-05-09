@@ -23,6 +23,10 @@ router.get('/homepage', function (req, res) {
     res.render('homepage');
 });
 
+router.get('/gallery', function (req, res) {
+    res.render('gallery');
+});
+
 router.get('/ec', function (req, res) {
     res.render('e-comm');
 });
