@@ -3,26 +3,17 @@ var router = express.Router();
 
 
 
-router.get('/', function (req, res) {
-    res.render('index');
-});
+router.get('/', (req, res) => res.render('index'));
 
-router.get('/contact', function (req, res) {
-    res.render('contact');
-});
+router.get('/contact', (req, res) => res.render('contact'));
 
-router.get('/about', function (req, res) {
-    res.render('about');
-});
+router.get('/about', (req, res) => res.render('about'));
 
-router.get('/trial', function (req, res) {
-    res.render('trial');
-});
+router.get('/trial', (req, res) => res.render('trial'));
 
-router.get('/homepage', function (req, res) {
-    res.render('homepage');
-});
+router.get('/homepage', (req, res) => res.render('homepage'));
 
+<<<<<<< HEAD
 router.get('/gallery', function (req, res) {
     res.render('gallery');
 });
@@ -30,6 +21,9 @@ router.get('/gallery', function (req, res) {
 router.get('/ec', function (req, res) {
     res.render('e-comm');
 });
+=======
+router.get('/ec', (req, res) => res.render('e-comm'));
+>>>>>>> origin/master
 
 
 
