@@ -15,5 +15,7 @@ router.get('/homepage', (req, res) => res.render('homepage'));
 
 router.get('/gallery', (req, res) => res.render('gallery'));
 
+router.get('/abbout', (req, res) => res.render('abbout'));
+
 //export this router to use in our index.js
 module.exports = router;
