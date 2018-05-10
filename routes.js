@@ -17,11 +17,10 @@ router.get('/gallery', (req, res) => res.render('gallery'));
 
 router.get('/abbout', (req, res) => res.render('abbout'));
 
-<<<<<<< HEAD
 router.get('/ec', (req, res) => res.render('ec'));
 
 router.get('/e-comm', (req, res) => res.render('e-comm'));
-=======
+
 
 
 // Sample routes -----
@@ -50,7 +49,5 @@ router.get("/gallery/:id", (req, res) => res.send({
 
 
 
-
->>>>>>> origin/master
 //export this router to use in our index.js
 module.exports = router;
