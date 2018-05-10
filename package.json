@@ -30,6 +30,7 @@
         "pug": "^2.0.3"
     },
     "devDependencies": {
+        "async": "^2.6.0",
         "nodemon": "^1.17.4"
     }
 }
