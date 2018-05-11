@@ -10,7 +10,7 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
-var dbport = 'mongodb://127.0.0.1:27017';
+var dbport = 'mongodb://sparc:sparcpassword@ds119449.mlab.com:19449/sparc';
 
 var routes = require("./routes.js");
 

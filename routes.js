@@ -17,6 +17,14 @@ router.get('/gallery', (req, res) => res.render('gallery'));
 
 router.get('/abbout', (req, res) => res.render('abbout'));
 
+router.get('/ec', (req, res) => res.render('ec'));
+
+router.get('/e-comm', (req, res) => res.render('e-comm'));
+
+router.get('/admin', (req, res) => res.render('admin'));
+
+router.get('/dashboard', (req, res) => res.render('dashboard'));
+
 
 
 // Sample routes -----
@@ -42,7 +50,6 @@ router.get("/gallery/:id", (req, res) => res.send({
 }));
 
 // -----
-
 
 
 
