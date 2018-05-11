@@ -1,0 +1,52 @@
+html
+    head
+        title  Dashboard
+        // Compiled and minified CSS
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css')
+        link(href='https://fonts.googleapis.com/css?family=Raleway:100,300', rel='stylesheet')
+        // Compiled and minified JavaScript
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
+        style.
+            *{
+            font-family: 'Raleway', sans-serif;
+            }
+    body(style='background-color:white;')
+        .container.white(style='height: 100px; width: 100vw;')
+            h5(style='text-align: center; padding-top: 29px; font-size: 40px; color: black') SpArc
+        .container
+            .row
+                .col.s4
+                    a(style='color: black')
+                        .card.grey.lighten-2(style='width: 300px;')
+                            .card-content.white-text
+                                span.card-title Projects
+                                p
+                                    | I am a very simple card. I am good at containing small bits of information.
+                                    br
+                                    br
+                                    a.col.s4(style='color: black', href='#')  Add
+                                    a.col.s4(style='color: black', href='#')  Delete
+                                    a.col.s4(style='color: black', href='#')  Update
+                .col.s4
+                    a(style='color: black')
+                        .card.grey.lighten-2(style='width: 300px;')
+                            .card-content.white-text
+                                span.card-title Product
+                                p.white-text
+                                    | I am a very simple card. I am good at containing small bits of information.
+                                    br
+                                    br
+                                    a.col.s4(style='color: black', href='#')  Add
+                                    a.col.s4(style='color: black', href='#')  Delete
+                                    a.col.s4(style='color: black', href='#')  Update
+                .col.s4
+                    a(style='color: black')
+                        .card.grey.lighten-2(style='width: 300px;')
+                            .card-content.black-text
+                                span.card-title Enquiries
+                                p
+                                    | I am a very simple card. I am good at containing small bits of information.
+                                    br
+                                    br
+                                    a.col.s6(style='color: black', href='#')  Add
+                                    a.col.s6(style='color: black', href='#')  Delete

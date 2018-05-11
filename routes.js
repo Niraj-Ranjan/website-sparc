@@ -21,6 +21,10 @@ router.get('/ec', (req, res) => res.render('ec'));
 
 router.get('/e-comm', (req, res) => res.render('e-comm'));
 
+router.get('/admin', (req, res) => res.render('admin'));
+
+router.get('/dashboard', (req, res) => res.render('dashboard'));
+
 
 
 // Sample routes -----
