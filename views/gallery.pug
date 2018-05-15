@@ -1,142 +1,172 @@
-doctype html
-html(lang='en-us')
+
+html
     head
+        link(rel='icon', href='images/black-transparent.png', type='image/png', sizes='16x16')
+        title SpArc Gallery
         meta(charset='utf-8')
-        title Gallery
-
-        link(rel='stylesheet', href='/css/lightbox.min.css')
-
-        style.
-            * {
-            font-family: 'Raleway', sans-serif;
-            }
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/css/gallery.css')
     body
-        section
-            br
-            br
-            .container
-                h3(style='padding: 0px;') Architecture
-            br
-            .container(style='width: 100vw; overflow-x: scroll;')
-                .row(style='width: 3200px;')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img9.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img9.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img5.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img5.jpg', alt='')
-        section
-            br
-            br
-            .container
-                h3(style='padding: 0px;') Farm House
-            br
-            .container(style='width: 100vw; overflow-x: scroll;')
-                .row(style='width: 3200px;')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img9.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img9.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img5.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img5.jpg', alt='')
-        section
-            br
-            br
-            .container
-                h3(style='padding: 0px;') Bunglows
-            br
-            .container(style='width: 100vw; overflow-x: scroll;')
-                .row(style='width: 3200px;')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img9.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img9.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img5.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img5.jpg', alt='')
-        section
-            br
-            br
-            .container
-                h3(style='padding: 0px;') Commercial
-            br
-            .container(style='width: 100vw; overflow-x: scroll')
-                .row(style='width: 250vw;')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img9.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img9.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img6.jpg', data-lightbox='example-set', data-title='Click the right half of the image to move forward.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img6.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img7.jpg', data-lightbox='example-set', data-title='Or press the right arrow on your keyboard.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img7.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img8.jpg', data-lightbox='example-set', data-title="The next image in the set is preloaded as you're viewing.", style=' overflow: hidden;')
-                            img.example-image(src='/images/img8.jpg', alt='')
-                    .col(style='height: 300px; width: 400px; overflow: hidden; align-content: center;')
-                        a.example-image-link(href='/images/img5.jpg', data-lightbox='example-set', data-title='Click anywhere outside the image or the X to the right to close.', style=' overflow: hidden;')
-                            img.example-image(src='/images/img5.jpg', alt='')
-        script(src='/js/lightbox-plus-jquery.min.js')
+        // Wrapper
+        #wrapper
+            // Header
+            header#header
+                span.avatar
+                    img(src='images/white-transparent.png', alt='')
+                h1
+                    | Welcome to the Room of Art by
+                    br
+                    |  SpArc
+                br
+                ul.icons
+                    li
+                        a.icon.style2.fa-twitter(href='#')
+                            span.label Twitter
+                    li
+                        a.icon.style2.fa-facebook(href='#')
+                            span.label Facebook
+                    li
+                        a.icon.style2.fa-instagram(href='#')
+                            span.label Instagram
+                    li
+                        a.icon.style2.fa-500px(href='#')
+                            span.label 500px
+                    li
+                        a.icon.style2.fa-envelope-o(href='#')
+                            span.label Email
+            // Main
+            section#main
+                // Thumbnails
+                section.thumbnails
+                    div
+                        h1(style='text-align: center') Architecture
+                        a(href='images/fulls/01.jpg')
+                            img(src='images/thumbs/01.jpg', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/08.png')
+                            img(src='images/thumbs/08.png', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/09.png')
+                            img(src='images/thumbs/09.png', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/03.jpg')
+                            img(src='images/thumbs/03.jpg', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                    div
+                        h1(style='text-align: center') Interior
+                        a(href='images/fulls/10.png')
+                            img(src='images/thumbs/10.png', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/11.png')
+                            img(src='images/thumbs/11.png', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/12.png')
+                            img(src='images/thumbs/12.png', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/13.png')
+                            img(src='images/thumbs/13.png', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/14.png')
+                            img(src='images/thumbs/14.png', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                    div
+                        h1(style='text-align: center') Landscaping
+                        a(href='images/fulls/06.jpg')
+                            img(src='images/thumbs/06.jpg', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/07.jpg')
+                            img(src='images/thumbs/07.jpg', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+                        a(href='images/fulls/07.jpg')
+                            img(src='images/thumbs/07.jpg', alt='')
+                            h3
+                                | Project Name: XXXXXXXXXXXX
+                                br
+                                | Design Style: XXXXXXXXXX
+                                br
+                                | Category: XXXXXXXXX
+                                br
+                                | Year: yyyy/mm
+
+        // Scripts
+        script(src='/js/jquery.min.js')
+        script(src='/js/jquery.poptrox.min.js')
+        script(src='/js/skel.min.js')
+        script(src='/js/gallery.js')
