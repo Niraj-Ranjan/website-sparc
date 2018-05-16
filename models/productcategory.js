@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var ProductCategories = new Schema({
+var ProductCategory = new Schema({
     name: {
         type: String,
         required: true,
@@ -13,11 +13,11 @@ var ProductCategories = new Schema({
 
 // Virtual for category's url
 
-ProductCategories
+ProductCategory
     .virtual('url')
     .get(function () {
         return '/catalog/product/' + this.name;
     });
 
 //Export model
-module.exports = mongoose.model('ProductCategories', ProductCategories);
+module.exports = mongoose.model('ProductCategory', ProductCategory);
