@@ -1,10 +1,10 @@
 doctype html
 html(lang='en')
     head
-        meta(charset='UTF-8')
-        title login/signup form animation
+        title admin | panel
         link(rel='stylesheet', href='/css/admin.css')
     body
+
         .form-structor
             .signup
                 h2#signup.form-title SpArc
@@ -16,13 +16,14 @@ html(lang='en')
                         input#username.input(type='text', placeholder='username')
                         input#password.input(type='password', placeholder='Password')
                     button.submit-btn(onclick='validate()') Log in
-        script.
-            function validate() {
-            console.log("Enter val");
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            if (((username == "Sagar") && (password == "SpArc")) || ((username == "Shivani") && (password == "SpArc"))) {
-            window.location = "dashboard";
-            }
-            }
-        script(src='/js/admin.js')
+            script.
+                function validate() {
+                console.log("Enter val");
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if (((username == "Sagar") && (password == "SpArc")) || ((username == "Shivani") && (password == "SpArc"))) {
+                window.location = "dashboard";
+                }
+                }
+
+script(src='/js/admin.js')
