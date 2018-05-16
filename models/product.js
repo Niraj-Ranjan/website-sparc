@@ -23,7 +23,7 @@ var ProductSchema = new Schema({
     },
     categories: [{
         type: Schema.ObjectId,
-        ref: 'ProductCategories'
+        ref: 'ProductCategory'
     }]
 });
 
