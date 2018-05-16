@@ -1,103 +1,161 @@
 doctype html
 html
     head
-        title About
+        title About the team
         include ./head.pug
-
-    body
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+        meta(name='description', content='')
+        meta(name='keywords', content='')
+        link(rel='stylesheet', href='/css/abbout.css')
+    body.is-preload
         include ./menu.pug
-
-        #index-banner.parallax-container.valign-wrapper
-            .container
-                .row
-                    .col.s12.center
-                        h1.header.center.teal-text.text-lighten-2 About SpArc
-
-                .row
-                    .col.s12.center
-                        h5.header.col.s12.light Description
-            .parallax
-                img(src="/images/download.jpg")
-                .container
-                    h1.header.center.teal-text.text-lighten-2 About SpArc
-
-        .container
-            .section
-                .row
-                    .col.s12.center
-                        h3 History
-                        p.center-align Dipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae
-
-
-        .parallax-container.valign-wrapper
-            .container
-                h1.header.center.teal-text.text-lighten-2 Team Members
-            .parallax
-                img(src="/images/background2.jpg")
-
-
-        .container
-            .section
-                .row
-                    .col.s12.center
-                        p.center-align We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.
-
-
-        .container
-            .row
-                .col.s12.m4.push-m4
-                    .card
-                        .card-image.waves-effect.waves-block.waves-light
-                             img.activator(src='images/landscaping.jpg')
-                        .card-content
-                            span.card-title.activator.center.grey-text.text-darken-4 OWNER
-                        .card-reveal.white.lighten-4.black-text
-                            span.card-title.grey-text.text-darken-4.center
-                                | OWNER
-                                i.material-icons.right close
-                            table.centered.highlight
-                                tbody
-                                    p information
-            .row
-                .col.center.s12.m4
-                    .card
-                        .card-image.waves-effect.waves-block.waves-light
-                            img.activator(src='images/landscaping.jpg')
-                        .card-content
-                            span.card-title.center.activator.grey-text.text-darken-4 TUSHAR JOSHI
-                        .card-reveal.white.lighten-4.black-text
-                            span.card-title.center
-                                | TUSHAR JOSHI
-                                i.material-icons.right close
-                            p
-                                table.centered.highlight
-                                    tbody
-                                        p INFORMATION
-                .col.center.s12.m4
-                    .card
-                        .card-image.waves-effect.waves-block.waves-light
-                            img.activator(src='images/landscaping.jpg')
-                        .card-content
-                            span.card-title.activator.center.grey-text.text-darken-4 PIYUSH JOSHI
-                        .card-reveal.white.lighten-4.black-text
-                            span.card-title.grey-text.text-darken-4.center
-                                | PIYUSH JOSHI
-                                i.material-icons.right close
-                            table.centered.highlight
-                                tbody
-                                    p information
-                .col.center.s12.m4
-                    .card
-                        .card-image.waves-effect.waves-block.waves-light
-                            img.activator(src='images/landscaping.jpg')
-                        .card-content
-                            span.card-title.activator.grey-text.center.text-darken-4 KRUSHN DAYSHMOOKH
-                        .card-reveal.white.lighten-4.black-text
-                            span.card-title.grey-text.text-darken-4.center
-                                | KRUSHN DAYSHMOOKH
-                                i.material-icons.right close
-                            table.centered.highlight
-                                tbody
-                                    p information
-
+        section.wrapper
+            .inner
+                header.special
+                    h2 About the Team
+                    p(style='font-size:20px;')
+                        | Great things in business are never done by one person. They're done by a team of people.
+                        br
+                        | - Steve Jobs
+                .testimonials
+                    section
+                        .content(style='background-color: #eeeeee;')
+                            blockquote
+                                p
+                                    | Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.
+                            .author
+                                .image
+                                    img(src='images/pic03.jpg', alt='')
+                                p.credit
+                                    | -
+                                    strong Sagar Chaudhari
+                                    span
+                                        br
+                                        | CEO - SpArc Associates
+                            #social-bar(style='margin-left: 50px;')
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-facebook
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-twitter
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-dribbble
+                                a(href='#', style='margin-left: 20px;')
+                                    i.fa.fa-codepen
+                    section
+                        .content(style='background-color: #eeeeee;')
+                            blockquote
+                                p
+                                    | Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.
+                            .author
+                                .image
+                                    img(src='images/pic01.jpg', alt='')
+                                p.credit
+                                    | -
+                                    strong Shivani Chaudhari
+                                    span
+                                        br
+                                        | CEO - SpArc Associates
+                            #social-bar(style='margin-left: 50px;')
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-facebook
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-twitter
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-dribbble
+                                a(href='#', style='margin-left: 20px;')
+                                    i.fa.fa-codepen
+                    section
+                        .content(style='background-color: #eeeeee;')
+                            blockquote
+                                p
+                                    | Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.
+                            .author
+                                .image
+                                    img(src='images/pic02.jpg', alt='')
+                                p.credit
+                                    | -
+                                    strong lol
+                                    span
+                                        br
+                                        | Position- SpArc Associates
+                            #social-bar(style='margin-left: 50px;')
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-facebook
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-twitter
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-dribbble
+                                a(href='#', style='margin-left: 20px;')
+                                    i.fa.fa-codepen
+                .testimonials
+                    section
+                        .content(style='background-color: #eeeeee;')
+                            blockquote
+                                p
+                                    | Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.
+                            .author
+                                .image
+                                    img(src='images/pic01.jpg', alt='')
+                                p.credit
+                                    | -
+                                    strong lol
+                                    span
+                                        br
+                                        | Position- SpArc Associates
+                            #social-bar(style='margin-left: 50px;')
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-facebook
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-twitter
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-dribbble
+                                a(href='#', style='margin-left: 20px;')
+                                    i.fa.fa-codepen
+                    section
+                        .content(style='background-color: #eeeeee;')
+                            blockquote
+                                p
+                                    | Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.
+                            .author
+                                .image
+                                    img(src='images/pic03.jpg', alt='')
+                                p.credit
+                                    | -
+                                    strong lol
+                                    span
+                                        br
+                                        | Position- SpArc Associates
+                            #social-bar(style='margin-left: 50px;')
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-facebook
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-twitter
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-dribbble
+                                a(href='#', style='margin-left: 20px;')
+                                    i.fa.fa-codepen
+                    section
+                        .content(style='background-color: #eeeeee;')
+                            blockquote
+                                p
+                                    | Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.
+                            .author
+                                .image
+                                    img(src='images/pic02.jpg', alt='')
+                                p.credit
+                                    | -
+                                    strong lol
+                                    span
+                                        br
+                                        | Position- SpArc Associates
+                            #social-bar(style='margin-left: 50px;')
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-facebook
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-twitter
+                                a(href='#', target='_blank', style='margin-left: 20px;')
+                                    i.fa.fa-dribbble
+                                a(href='#', style='margin-left: 20px;')
+                                    i.fa.fa-codepen
         include ./footer.pug

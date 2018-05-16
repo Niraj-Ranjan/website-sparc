@@ -1,56 +1,104 @@
 doctype html
-
-html
-
-
+html(lang='en')
     head
-        include ./head.pug
-
-        link(rel="stylesheet", type="text/css", href="/css/contact.css")
-        link(href='https://fonts.googleapis.com/css?family=Raleway:100,300', rel='stylesheet')
-
-
-    body.screen-height
-        #page.screen-height
-
-            div.container
-
-
-                #row.row
-                    .col.s12m6.push-m6
-                        form#form-container
-                            h2.semi-bold.grey-text.text-darken-3 CONTACT
-                            .row
-                                .col.s6.input-field
-
-                                    input#lname(type="text", name="name")
-                                    label.semi-bold.grey-text.text-darken-3(for="name") Name
-
-
-                                .col.s6.input-field
-
-                                    input#contact(type="text", name="contact")
-                                    label.semi-bold.grey-text.text-darken-3(for="contact") Phone
-
-
-
-                            .row
-                                .col.s12.input-field
-
-                                    input#lname(type="text",name="email")
-                                    label.semi-bold.grey-text.text-darken-3(for="email") Email
-
-
-
-                            .row
-                                .col.s12.input-field
-
-                                    input#lname(type="text",name="contact")
-                                    label.semi-bold.grey-text.text-darken-3(for="message") Comment
-
-
-                            .row
-                               .btn.semi-bold.grey-text.text-darken-3.btn-flat.hoverable Submit
-
-                               .btn.semi-bold.grey-text.text-darken-3.right.btn-flat.hoverable Admin Login
-
+        title Contact V17
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // ===============================================================================================
+        link(rel='icon', type='image/png', href='images/icons/favicon.ico')
+        // ===============================================================================================
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='fonts/font-awesome-4.7.0/css/font-awesome.min.css')
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='vendor/animate/animate.css')
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='vendor/css-hamburgers/hamburgers.min.css')
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='vendor/animsition/css/animsition.min.css')
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='vendor/select2/select2.min.css')
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='vendor/daterangepicker/daterangepicker.css')
+        // ===============================================================================================
+        link(rel='stylesheet', type='text/css', href='css/util.css')
+        link(rel='stylesheet', type='text/css', href='css/contact.css')
+        // ===============================================================================================
+    body
+        .container-contact100
+            .wrap-contact100
+                form.contact100-form.validate-form
+                    span.contact100-form-title
+                        | Reach
+                    label.label-input100(for='first-name') Tell SpArc your name *
+                    .wrap-input100.rs1-wrap-input100.validate-input(data-validate='Type first name', style='width: 100%;')
+                        input#first-name.input100(type='text', name='first-name', placeholder='Name')
+                        span.focus-input100
+                    label.label-input100(for='email') Enter your email *
+                    .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+                        input#email.input100(type='text', name='email', placeholder='Eg. example@email.com')
+                        span.focus-input100
+                    label.label-input100(for='phone') Enter phone number *
+                    .wrap-input100
+                        input#phone.input100(type='text', name='phone', placeholder='Eg. +XX  XXXXX XXXXX')
+                        span.focus-input100
+                    label.label-input100(for='message') Regarding*
+                    .wrap-input100.validate-input(data-validate='Message is required')
+                        textarea#message.input100(name='message', placeholder='Write us a message')
+                        span.focus-input100
+                    .container-contact100-form-btn
+                        button.contact100-form-btn
+                            | Send Message
+                .contact100-more.flex-col-c-m(style="background-image: url('images/bg-01.jpg');")
+                    .flex-w.size1.p-b-47
+                        .txt1.p-r-25
+                            span.lnr.lnr-map-marker
+                        .flex-col.size2
+                            span.txt1.p-b-20
+                                | Address
+                            span.txt2
+                                | 31, Friends Society-2 , Dindayal Nagar, Nagpur - 440022
+                    .dis-flex.size1.p-b-47
+                        .txt1.p-r-25
+                            span.lnr.lnr-phone-handset
+                        .flex-col.size2
+                            span.txt1.p-b-20
+                                | Lets Talk
+                            span.txt3
+                                | +91 97699 89966
+                    .dis-flex.size1.p-b-47
+                        .txt1.p-r-25
+                            span.lnr.lnr-envelope
+                        .flex-col.size2
+                            span.txt1.p-b-20
+                                | General Support
+                            span.txt3
+                                | ar.sagarchaudhari@gmail.com
+        #dropDownSelect1
+        // ===============================================================================================
+        script(src='vendor/jquery/jquery-3.2.1.min.js')
+        // ===============================================================================================
+        script(src='vendor/animsition/js/animsition.min.js')
+        // ===============================================================================================
+        // ===============================================================================================
+        script(src='vendor/select2/select2.min.js')
+        script.
+            $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+            });
+        // ===============================================================================================
+        script(src='vendor/daterangepicker/moment.min.js')
+        script(src='vendor/daterangepicker/daterangepicker.js')
+        // ===============================================================================================
+        script(src='vendor/countdowntime/countdowntime.js')
+        // ===============================================================================================
+        script(src='js/main.js')
+        // Global site tag (gtag.js) - Google Analytics
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-23581568-13')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-23581568-13');
