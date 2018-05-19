@@ -1405,7 +1405,7 @@
 	}
 
 	body {
-		background-color: #000;
+		background-color: #eee;
 		background-size: cover;
 		background-position: top center;
 	}
@@ -1468,7 +1468,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #444;
 		font-weight: 200;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
@@ -1812,7 +1812,7 @@
 		color: rgba(255, 255, 255, 0.35) !important;
 		opacity: 1.0;
 	}
-
+.section
 	::-moz-placeholder {
 		color: rgba(255, 255, 255, 0.35) !important;
 		opacity: 1.0;
@@ -1878,8 +1878,8 @@
 			border-radius: 100%;
 			display: inline-block;
 			padding: 0.5em;
-			border: solid 1px rgba(255, 255, 255, 0.25);
-			background-color: rgba(255, 255, 255, 0.075);
+			border: solid 1px #222222;
+
 		}
 
 			.icon.style2:before {
@@ -1888,6 +1888,7 @@
 				height: 1.25em;
 				line-height: 1.25em;
 				font-size: 1.35em;
+                color: black;
 			}
 
 			.icon.style2:hover {
@@ -2583,7 +2584,7 @@
 	}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.65);
+			color: #333333;
 		}
 
 		#header .avatar {
@@ -2628,3 +2629,9 @@
 			}
 
 		}
+
+
+
+section.thumbnails a {
+    background: #FFFFFF;
+}

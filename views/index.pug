@@ -46,38 +46,29 @@ html
 
         .parallax-container.valign-wrapper
             .parallax
-                img(src='/images/new_york_usa_city_top_view_119306_3840x2160.jpg', alt='Unsplashed background img 2')
-                br
-                br
-                br
-                br
-                br
-                br
-                br
-                .fake-div
-                    .container
-                        #counter.row
-                            .col.s12
-                                .col.s4
-                                    i.fa.fa-briefcase(style='font-size:60px; align-content: center; color: #eceff1;margin-left: 130px;')
-                                    hr(style='width: 150px;')
-                                    h5(style='color: #eceff1; text-align: center; font-size: 40px;  font-size: 60px;') Projects
-                                    .counter-value(data-count='300', style='text-align: center; color: #eceff1;font-size: 60px;') 0
-                                .col.s4
-                                    i.fa.fa-users(style='font-size:60px; align-content: center; color: #eceff1;margin-left: 130px;')
-                                    hr(style='width: 150px;')
-                                    h5(style='color: #eceff1; text-align: center; font-size: 40px;font-size: 60px;') Clients
-                                    .counter-value(data-count='400', style='text-align: center; color: #eceff1;font-size: 60px;') 100
-                                .col.s4
-                                    i.fa.fa-envira(style='font-size:60px; align-content: center; color: #eceff1;margin-left: 130px;')
-                                    hr(style='width: 150px;')
-                                    h5(style='color: #eceff1;text-align: center; font-size: 40px;font-size: 60px;') Designs
-                                    .counter-value(data-count='1500', style='text-align: center; color: #eceff1;font-size: 60px') 200
-                    .fake-div
+                img.darken(src='/images/new_york_usa_city_top_view_119306_3840x2160.jpg', alt='Unsplashed background img 2')
+
+            .container
+                .row#counter
+                    .col.s4.center
+                        .white-text
+                            .counter-value(data-count='300', style='font-size: 4em') 0
+                            h5 Projects
+
+                    .col.s4.center
+                        .white-text
+                            .counter-value(data-count='400', style='font-size: 4em') 100
+                            h5 Clients
+
+                    .col.s4.center
+                        .white-text
+                            .counter-value(data-count='1500', style='font-size: 4em') 200
+                            h5 Designs
 
 
 
-        div(style='height: 220px; background-color: white;')
+
+        div(style='background-color: white;')
             .container
                 .section
                     .row

@@ -6,10 +6,10 @@ $(document).ready(function () {
         //disableAxis: "y"
     });
 
-    $(".navbar-fixed").addClass("hidden");
+    //$(".navbar-fixed").addClass("hidden");
 
 });
 
-$(window).scroll(function (event) {
-    $('.navbar-fixed').removeClass("hidden");
-});
+//$(window).scroll(function (event) {
+   // $('.navbar-fixed').removeClass("hidden");
+//});
