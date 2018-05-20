@@ -15,6 +15,8 @@ router.get('/homepage', (req, res) => res.render('homepage'));
 
 router.get('/gallery', (req, res) => res.render('gallery'));
 
+router.get('/shop', (req, res) => res.render('shop'));
+
 router.get('/abbout', (req, res) => res.render('abbout'));
 
 router.get('/ec', (req, res) => res.render('ec'));
