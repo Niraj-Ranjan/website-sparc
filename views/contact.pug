@@ -1,5 +1,7 @@
 html(lang='en')
     head
+    include ./head.pug
+
         title Contact | SpArc
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -15,6 +17,8 @@ html(lang='en')
         link(rel='stylesheet', type='text/css', href='/css/contact.css')
         // ===============================================================================================
     body
+        include ./menu.pug
+
 
         .container-contact100
             .wrap-contact100
@@ -92,4 +96,7 @@ html(lang='en')
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'UA-23581568-13');
+
+            include ./footer.pug
+
 

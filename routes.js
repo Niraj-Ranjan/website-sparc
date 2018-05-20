@@ -25,6 +25,8 @@ router.get('/admin', (req, res) => res.render('admin'));
 
 router.get('/dashboard', (req, res) => res.render('dashboard'));
 
+router.get('/404', (req, res) => res.render('404'));
+
 47501
 
 

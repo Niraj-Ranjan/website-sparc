@@ -1,0 +1,39 @@
+.body {
+    background: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.mega {
+    line-height: 1.65em;
+    font-weight: bold;
+    font-size: 27em;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 57%;
+    top: 45%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.bola {
+    line-height: 1.65em;
+    font-weight: bold;
+    font-size: 27em;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 60%;
+    top: 48%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.boom {
+    color: #f5f5f5;
+}
