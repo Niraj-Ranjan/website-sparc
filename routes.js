@@ -27,6 +27,12 @@ router.get('/admin', (req, res) => res.render('admin'));
 
 router.get('/dashboard', (req, res) => res.render('dashboard'));
 
+router.get('/updatepro', (req, res) => res.render('updatepro'));
+
+router.get('/addpro', (req, res) => res.render('addpro'));
+
+router.get('/delpro', (req, res) => res.render('delpro'));
+
 router.get('/404', (req, res) => res.render('404'));
 
 47501
