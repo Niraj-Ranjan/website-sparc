@@ -12,7 +12,7 @@ exports.product_detail = function(req, res) {
 
 // Display Product create form on GET.
 exports.product_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Product create GET');
+    res.render('addpro');
 };
 
 // Handle Product create on POST.
