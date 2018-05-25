@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Add Product
+        link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css')
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        // Compiled and minified JavaScript
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
+        style.
+            .btn {
+            background-color: deepskyblue;
+            }
+            .dropdown-content li>span {
+            color: dodgerblue;
+            }
+    body
+        br
+        br
+        h1(style='text-align: center;')  Add Product
+        br
+        .container
+            .row
+                form.col.s12
+                    .row
+                        .input-field.col.s12
+                            textarea#description.materialize-textarea(length='30')
+                            label(for='description') Product Name
+                    .row
+                        .input-field.col.s6
+                            select
+                                option(value='', disabled='', selected='') Dimensions
+                                option(value='1') mm * mm
+                                option(value='2') in * in
+                                option(value='3') Option 3
+                        .input-field.col.s6
+                            select(multiple='')
+                                option(value='', disabled='', selected='') Material
+                                option(value='1') WOOD
+                                option(value='2') PLASTIC
+                                option(value='3') MATERIAL 3
+                                option(value='3') MATERIAL 4
+                                option(value='3') MATERIAL 5
+                                option(value='3') MATERIAL 3
+                    .row
+                        .input-field.col.s6
+                            label Sale Start Date
+                            input#beginDate.datepicker(type='date')
+                        .input-field.col.s6
+                            label Sale End date
+                            input#endDate.datepicker(type='date')
+                    .row
+                        .input-field.col.s12
+                            textarea#description.materialize-textarea(length='250')
+                            label(for='description') Details about Product
+                    .row
+                        .input-field.col.s6
+                            textarea#description.materialize-textarea(length='5')
+                            label(for='description') Product ID
+                a.waves-effect.waves-light.btn
+                    i.material-icons.right arrow_upward
+                    | Upload Image
+        script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js')
+        script(src='js/index.js')

@@ -1,0 +1,39 @@
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Add Product
+        link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css')
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        // Compiled and minified JavaScript
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
+        style.
+            .btn{
+            background-color: deepskyblue;
+            }
+            .dropdown-content
+            li>span{
+            color: dodgerblue;
+            }
+    body
+        br
+        br
+        h1(style='text-align: center')  Delete Product
+        br
+        .container
+            .row
+                form.col.s12
+                    .row
+                        .input-field.col.s12
+                            textarea#description.materialize-textarea(length='30')
+                            label(for='description') Product Name
+                    .row
+                        .input-field.col.s6
+                            textarea#description.materialize-textarea(length='05')
+                            label(for='description') Product ID
+                a.waves-effect.waves-light.btn
+                    i.material-icons.right clear
+                    | Delete Product
+        script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js')
+        script(src='js/index.js')

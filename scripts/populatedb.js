@@ -17,7 +17,7 @@ var ProductCategory = require('../models/productcategory')
 var Enquiry = require('../models/enquiry')
 
 
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 var mongoDB = userArgs[0];
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -202,13 +202,13 @@ async.series([
     createenquiries
 ],
     // Optional callback
-    function (err, results) {
-        if (err) {
-            console.log('FINAL ERR: ' + err);
-        } else {
-            console.log('Enquiries: ' + enquiries);
+function (err, results) {
+    if (err) {
+        console.log('FINAL ERR: ' + err);
+    } else {
+        console.log('Enquiries: ' + enquiries);
 
-        }
-        // All done, disconnect from database
-        mongoose.connection.close();
-    });
+    }
+    // All done, disconnect from database
+    mongoose.connection.close();
+});
