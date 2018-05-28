@@ -170,6 +170,9 @@ router.get('/product/:id', product_controller.product_detail);
 // GET request for list of all products.
 router.get('/products', product_controller.product_list);
 
+// GET request for list of all products.
+router.get('/products/edit', product_controller.product_edit);
+
 /// CATEGORY ROUTES ///
 
 // GET request for creating a category. NOTE This must come before route that displays category (uses id).

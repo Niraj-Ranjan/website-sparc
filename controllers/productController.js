@@ -3,14 +3,31 @@ var Product = require('../models/product');
 // Display list of all Products.
 exports.product_list = function (req, res) {
     Product.find({})
-    .populate("categories")
+        .populate('categories')
         .exec(function (err, list_products) {
             if (err) {
                 return next(err);
             }
             //Successful, so render
-            //res.render('shop', { title: 'Book List', products: list_products });
-            res.send(list_products);
+            res.render('products', {
+                products: list_products
+            });
+            //res.send(list_products);
+        });
+};
+
+exports.product_edit = function (req, res) {
+    Product.find({})
+        .populate('categories')
+        .exec(function (err, list_products) {
+            if (err) {
+                return next(err);
+            }
+            //Successful, so render
+            res.render('edit-products', {
+                products: list_products
+            });
+            //res.send(list_products);
         });
 };
 

@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+    body
+        include ./menu.pug
+
+        h1.center SHOP
+
+        .container
+            .row
+                each product in products
+                    .col.s6.l4
+
+                        .card.z-depth-2.hoverable
+                            .card-image
+                                //- img(src=product.images, alt='product image')
+                                img.materialboxed(src='/images/xxx.jpg', alt='product image')
+                                span.card-title #{product.name}
+
+                            .card-content
+                                p #{product.description}
+
+                            .card-action
+                                a.btn-flat.teal.lighten-2.white-text(href=product.url) Rs #{product.cost}
+
+
+                else
+                    p There are no products.
+
+        include ./footer.pug
