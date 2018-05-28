@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 // ----- Initialize Express -----
 
 var express = require("express");
