@@ -23,10 +23,11 @@ html
                                 p #{product.description}
 
                             .card-action
-                                a.btn-flat.teal.lighten-2.white-text(href=product.url) Rs #{product.cost}
+                                a.btn-flat.teal.lighten-2.white-text(href='javascript:enquire(\'345\');') Rs #{product.cost}
 
 
                 else
                     p There are no products.
 
         include ./footer.pug
+        script(type='text/javascript', src='/js/shop.js')
