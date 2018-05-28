@@ -1,5 +1,7 @@
+doctype html
 html(lang='en')
     head
+<<<<<<< HEAD
 
         include ./head.pug
 
@@ -93,3 +95,103 @@ html(lang='en')
 
 
 
+=======
+        meta(charset='UTF-8')
+        title Materialize Parallax
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css')
+        link(rel='stylesheet', href='/css/contact.css')
+    style.
+        .btn {
+        background-color: deepskyblue;
+        }
+    body
+        // Header
+        // Content
+        #hello.container(style='height: 100vh;')
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            br
+            .text-wrap
+                svg(viewbox='0 0 500 80')
+                    pattern#p-img(viewbox='0 0 300 100', patternunits='userSpaceOnUse', width='200%', height='200%', x='-60%', y='-10%')
+                        // <image xlink:href="https://68.media.tumblr.com/f6d55c4c3981fd7409a41f9e9cfa71bf/tumblr_oqy2keV1LD1uha1xeo1_400.gif" width="300" height="200"/>
+                    text.img-layer(text-anchor='middle', x='50%', y='50%', dy='.35em')
+                        | HELLO!
+                    |     x
+                    lineargradient#gr-overlay(x1='0', y1='0', x2='100%', y2='100%')
+                        stop(stop-color='hsla(50, 100%, 70%, 0.5)', offset='10%')
+                        stop(stop-color='hsla(200, 100%, 60%, 0.5)', offset='50%')
+                        stop(stop-color='hsla(320, 100%, 50%, 0.5)', offset='90%')
+                    text.gradient-layer(text-anchor='middle', x='50%', y='50%', dy='.35em')
+                        | HELLO!
+        .parallax-container.center.valign-wrapper
+            .container
+                .row
+                    .col.s12.white-text
+                        h2.white-text Get In Touch
+            .parallax
+                img(src='/images/collaboration-colleagues-community-398532.jpg')
+        .container
+            .row
+                .col.m4.s12
+                    .icon-block
+                        h2.center.light-blue-text
+                            i.material-icons flash_on
+                        h5.center Speeds up development
+                        p.light
+                            | We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+                .col.m4.s12
+                    .icon-block
+                        h2.center.light-blue-text
+                            i.material-icons group
+                        h5.center User Experience Focused
+                        p.light
+                            | By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+                .col.m4.s12
+                    .icon-block
+                        h2.center.light-blue-text
+                            i.material-icons settings
+                        h5.center Easy to work with
+                        p.light
+                            | We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+            br
+            br
+            br
+            br
+            br
+            .row
+                .col.s12
+                    form.col.s12
+                        .row
+                            .input-field
+                                i.material-icons.prefix.light-blue-text mail_outline
+                                input#email2.validate(type='email', required='', aria-required='true', placeholder='E-mail')
+                            .input-field
+                                i.material-icons.prefix.light-blue-text short_text
+                                input#example.validate(name='example', type='text', required='', aria-required='true', placeholder='Name')
+                            .input-field
+                                i.material-icons.prefix.light-blue-text phone
+                                input#icon_telephone.validate(type='tel', placeholder='Telephone')
+                            .input-field.col.s12
+                                i.material-icons.prefix.light-blue-text space_bar
+                                textarea#address.materialize-textarea(placeholder='Comments')
+            a.waves-effect.waves-light.btn(style=' background-color: deepskyblue;')
+                i.material-icons.right send
+                | Submit
+            br
+            br
+            br
+            br
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.9710859505967!2d79.04725481471043!3d21.11371889024891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf8930ef9dbb%3A0xb6983559d82481c4!2sSpArc+Associates+(Architects%2C+Planners%2C+Interior+Designers)!5e0!3m2!1sen!2sin!4v1527303524619', width='1450', height='600', frameborder='0', style='border:0', allowfullscreen='')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js')
+        script(src='/js/contact.js')
+>>>>>>> origin/master
