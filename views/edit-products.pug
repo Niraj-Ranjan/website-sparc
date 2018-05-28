@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+    body
+        include ./menu.pug
+
+        .container
+
+            h1.center products
+
+            div.collection.with-header
+                each product in products
+                    a.collection-item.avatar
+                        img.circle(src=product.images, alt=product.name)
+                        span.title.strong #{product.name}
+                        p #{product.description}
+                        p.orange-text Rs #{product.cost}
+                        //- .secondary-content
+                        //-     a(href='#')
+                        //-         i.material-icons.teal-text edit
+                        //-     a(href='#')
+                        //-         i.material-icons.teal-text delete
+
+                else
+                    p There are no products.
+        #edit-modal.modal
+            .modal-content
+            .modal-footer
+
+
+        include ./footer.pug
