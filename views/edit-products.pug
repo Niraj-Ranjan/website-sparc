@@ -25,9 +25,39 @@ html
 
                 else
                     p There are no products.
+
+        .btn.modal-trigger(data-target='edit-modal') open
+
         #edit-modal.modal
             .modal-content
+                form#product-form.container(action='/product/create', method='POST')
+                    .row
+                        .input-field.col.s6
+                            textarea#name.materialize-textarea(length='100')
+                            label(for='name') Product Name
+
+                        .input-field.col.s6
+                            textarea#description.materialize-textarea(lenght='1000')
+                            label(for='description')  Cost
+
+                        .input-field.col.s12
+                            textarea#description.materialize-textarea(lenght='1000')
+                            label(for='description')  Details
+
+                        .file-field.input-field.col.s12
+                            .btn
+                                span Upload Image
+                                input(type='file')
+                            .file-path-wrapper
+                                input.file-path.validate(type='text')
+
+
             .modal-footer
+                .container
+                    a.btn-flat.waves-effect.waves-red.red-text delete
+                    a.btn.waves-effect.waves-green.teal(onclick='$("#product-form").submit();') Save product
+
 
 
         include ./footer.pug
+        script
