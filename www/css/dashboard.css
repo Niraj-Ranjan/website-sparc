@@ -1,13 +1,9 @@
 #sahil:hover{
     background-color: aqua;
 }
-
-#button{
-    background-color: grey.lighten-2;
+.bt{
+    background-color: deepskyblue;
 }
-#button:hover{
-    background-color: white;
-}
-#lol{
-    text-align: center;
+#title:hover{
+    color: deepskyblue;
 }

@@ -6,6 +6,8 @@ html
         link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css')
         link(href='https://fonts.googleapis.com/css?family=Raleway:100,300', rel='stylesheet')
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        link(type="text/css", rel="stylesheet", href="/css/dashboard.css")
+
         // Compiled and minified JavaScript
         script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
         style.
@@ -13,72 +15,37 @@ html
             font-family: 'Raleway', sans-serif;
             }
     body(style='background-color:white;')
-        .navbar-fixed
-            nav.white
-                .nav-wrapper
-                    .container
-                        a.grey-text.text-darken-4.sidenav-trigger.hide-on-large-only(href='#', data-target='nav-mobile', onclick='sidenavinstance.open()')
-                            i.material-icons menu
-                        a.brand-logo(href='/')
-                            img(src='/images/black-transparent copy.png')
-                        ul#nav-mobile.right.hide-on-med-and-down
-                            li
-                                a.grey-text.text-darken-4(href='/') Home
-                            li
-                                a.grey-text.text-darken-4(href='/gallery') Gallery
-                            li
-                                a.grey-text.text-darken-4(href='/shop') Shop
-                            li
-                                a.grey-text.text-darken-4(href='/about') About
-                            li
-                                a.grey-text.text-darken-4(href='contact') Contact
-        ul#nav-mobile.sidenav
-            li
-                a(href='/') Home
-            li
-                a(href='/gallery') Gallery
-            li
-                a(href='/shop') Shop
-            li
-                a(href='/about') About
-            li
-                a(href='/contact') Contact
         .container.white(style='height: 100px; width: 100vw;')
             h5(style='text-align: center; padding-top: 29px; font-size: 40px; color: black;') SpArc
         .container#lol(style='width: 90vw;')
-            .row
+            .row(style='text-align:center; padding-left:80px')
+                .col.s4
+                    a(style='color: black;' href='#')
+                        .card.grey.lighten-2(style='width: 330px;')
+                            .card-content.white-text
+                                a.span.card-title#title(href='/projects/edit') Projects
+                                p(style='color:black;')
+                                    | Details Regarding the Projects.
+                                    br
+                                    br
+                                a.waves-effect.waves-light.btn.blue.lighten-2(href='/product/create') add
                 .col.s4
                     a(style='color: black;')
                         .card.grey.lighten-2(style='width: 330px;')
                             .card-content.white-text
-                                span.card-title Projects
-                                p
+                                a.span.card-title#title(href='/products/edit') Product
+                                p(style='color:black;')
                                     | Details Regarding the Projects.
                                     br
                                     br
-                                    a.waves-effect.waves-light.btn(href='/product/create') add
-                                    a.waves-effect.waves-light.btn(href='#', style='margin-left: 15px;') Delete
-                                    a.waves-effect.waves-light.btn(href='#', style='margin-left: 15px;') Update
-                .col.s4
-                    a(style='color: black;')
-                        .card.grey.lighten-2(style='width: 330px;')
-                            .card-content.white-text
-                                span.card-title Product
-                                p
-                                    | Details Regarding the Projects.
-                                    br
-                                    br
-                                    a.waves-effect.waves-light.btn(href='/product/create') add
-                                    a.waves-effect.waves-light.btn(href='#', style='margin-left: 15px;') Delete
-                                    a.waves-effect.waves-light.btn(href='#', style='margin-left: 15px;') Update
+                                a.waves-effect.waves-light.btn.blue.lighten-2(href='/product/create') add
                 .col.s4
                     a(style='color: black;')
                         .card.grey.lighten-2(style='width: 300px;')
                             .card-content.black-text
-                                span.card-title Enquiries
-                                p
+                                a.span.card-title#title(href='#') Enquiries
+                                p(style='color:black;')
                                     | Details Regarding the Enquiries.
                                     br
                                     br
-                                    a.waves-effect.waves-light.btn(href='/product/create') add
-                                    a.waves-effect.waves-light.btn(href='#', style='margin-left: 15px;') Delete
+                                a.waves-effect.waves-light.btn.blue.lighten-2(href='/product/create') view
