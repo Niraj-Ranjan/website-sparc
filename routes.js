@@ -67,8 +67,6 @@ router.get('/404', function (req, res) {
     res.render('404');
 });
 
-47501
-
 
 // Sample routes -----
 
