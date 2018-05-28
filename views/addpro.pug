@@ -5,11 +5,10 @@ html(lang='en')
         title Add Product
         link(rel='stylesheet prefetch', href='https://fonts.googleapis.com/icon?family=Material+Icons')
         link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css')
-
     body(style='max-height: 100vh;')
         h1(style='text-align: center;')  ADD Product
         br
-        form.container(action="/product/create" method="POST")
+        form.container(action='/product/create', method='POST')
             .row(style='height: 100px;')
                 .input-field.col.s12
                     textarea#name.materialize-textarea(length='100')
@@ -28,7 +27,7 @@ html(lang='en')
                         option(value='1') Chairs
                         option(value='2') Wall Peice
                         option(value='3') Wall Art
-            .row(style='height: 100px;')
+            .row
                 .col.s6
                     select.select_one(single='')
                         option(value='', disabled='', selected='') Dimensions
@@ -43,10 +42,15 @@ html(lang='en')
                         option(value='3') Material Name
                         option(value='4') Material Name
                         option(value='5') Material Name
-            a.waves-effect.waves-light.btn(style=' background-color: deepskyblue')
-                i.material-icons.right arrow_upward
-                | Upload Image
-            button.waves-effect.waves-light.btn(type="submit" style=' background-color: deepskyblue; margin-left:200px;')
+            .file-field.input-field
+                .btn
+                    span Upload Image
+                    input(type='file')
+                .file-path-wrapper
+                    input.file-path.validate(type='text')
+            br
+            br
+            button.waves-effect.waves-light.btn(type='submit', style=' background-color: deepskyblue; margin-left:200px;')
                 i.material-icons.right arrow_upward
                 | Upload Product
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js')
