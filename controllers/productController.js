@@ -33,8 +33,18 @@ exports.product_edit = function (req, res) {
 
 // Display detail page for a specific Product.
 exports.product_detail = function (req, res) {
-
-    res.send('NOT IMPLEMENTED: Product detail: ' + req.params.id);
+    Product.findById(req.params.id)
+        .populate('categories')
+        .exec(function (err, product) {
+            if (err) {
+                return next(err);
+            }
+            //Successful, so render
+            //console.log(product)
+            res.send(product);
+            //res.send(list_products);
+        });
+    //res.send('NOT IMPLEMENTED: Product detail: ' + String(req.params.id));
 };
 
 // Display Product create form on GET.
@@ -64,5 +74,5 @@ exports.product_update_get = function (req, res) {
 
 // Handle Product update on POST.
 exports.product_update_post = function (req, res) {
-    res.send('NOT IMPLEMENTED: Product update POST');
+    res.send('NOT IMPLEMENTED: Product update POST. id=' + req.params.id);
 };

@@ -12,8 +12,9 @@ html
 
             div.collection.with-header
                 each product in products
-                    a.collection-item.avatar.modal-trigger(data-target='edit-modal', onclick='populate('+product.id+')')
-                        img.circle(src=product.images, alt=product.name)
+                    a.collection-item.avatar(onclick='populate("'+product.id+'")')
+                        //- img.circle(src=product.images, alt=product.name)
+                        img.circle(src='/images/xxx.jpg', alt=product.name)
                         span.title.strong.grey-text.text-darken-2 #{product.name}
                         p.black-text #{product.description}
                         p.blue-text.text-lighten-1 Rs #{product.cost}
@@ -31,24 +32,24 @@ html
 
         #edit-modal.modal
             .modal-content
-                form#product-form.container(action='/product/create', method='POST')
+                form#product-form.container( method='POST')
                     .row
                         .input-field.col.s6
-                            textarea#name.materialize-textarea(length='100')
+                            input#product-name(type='text')
                             label(for='name') Product Name
 
                         .input-field.col.s6
-                            textarea#description.materialize-textarea(lenght='1000')
-                            label(for='description')  Cost
+                            input#product-cost(type='number')
+                            label(for='cost') Cost
 
                         .input-field.col.s12
-                            textarea#description.materialize-textarea(lenght='1000')
-                            label(for='description')  Details
+                            input#product-description(type='text')
+                            label(for='description') Description
 
                         .file-field.input-field.col.s12
                             .btn
                                 span Upload Image
-                                input(type='file')
+                                input#product-image(type='file')
                             .file-path-wrapper
                                 input.file-path.validate(type='text')
 
@@ -61,4 +62,5 @@ html
 
 
         include ./footer.pug
-        script
+        script(src="/js/edit-products.js")
+
