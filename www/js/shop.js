@@ -1,8 +1,12 @@
+/* eslint-env browser, jquery */
+
 function enquire(id) {
 
-    $.get('/')
-
-    M.toast({
-        html: 'Enquiry to be implemented soon.'
+    $.get('/product/' + id, function (product) {
+        M.toast({
+            html: 'Product Found ' + product.name
+        });
     });
+
+
 }
