@@ -33,6 +33,7 @@ exports.product_edit = function (req, res) {
 
 // Display detail page for a specific Product.
 exports.product_detail = function (req, res) {
+
     res.send('NOT IMPLEMENTED: Product detail: ' + req.params.id);
 };
 
