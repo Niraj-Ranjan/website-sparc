@@ -12,11 +12,12 @@ html
 
             div.collection.with-header
                 each product in products
-                    a.collection-item.avatar
+                    a.collection-item.avatar.modal-trigger(data-target='edit-modal')
                         img.circle(src=product.images, alt=product.name)
-                        span.title.strong #{product.name}
-                        p #{product.description}
-                        p.orange-text Rs #{product.cost}
+                        span.title.strong.grey-text.text-darken-2 #{product.name}
+                        p.black-text #{product.description}
+                        p.blue-text.text-lighten-1 Rs #{product.cost}
+
                         //- .secondary-content
                         //-     a(href='#')
                         //-         i.material-icons.teal-text edit
@@ -25,8 +26,8 @@ html
 
                 else
                     p There are no products.
-
-        .btn.modal-trigger(data-target='edit-modal') open
+        a.btn-floating.btn-large.waves-effect.waves-light.blue.modal-trigger(data-target='edit-modal')(style='align-content:right')
+            i.material-icons add
 
         #edit-modal.modal
             .modal-content
