@@ -54,8 +54,12 @@ app.set('views', './views');
 // -----
 
 var cors = require('cors');
-
 app.use(cors());
+
+// -----
+
+var favicon = require('serve-favicon');
+app.use(favicon('./www/favicon.ico'));
 
 // -----
 
