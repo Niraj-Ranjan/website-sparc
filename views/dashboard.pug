@@ -1,78 +1,16 @@
 html
     head
-        title  Dashboard
-        // Compiled and minified CSS
-        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css')
-        link(href='https://fonts.googleapis.com/css?family=Raleway:100,300', rel='stylesheet')
-        // Compiled and minified JavaScript
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js')
-        style.
-            *{
-            font-family: 'Raleway', sans-serif;
-            }
+        title  Dashboard | SpArc
+        include ./head.pug
     body(style='background-color:white;')
-        include./menu.pug
-        .navbar-fixed
-            nav.white
-                .nav-wrapper
-                    .container
-                        a.grey-text.text-darken-4.sidenav-trigger.hide-on-large-only(href="#", data-target="nav-mobile", onclick="sidenavinstance.open()")
-                            i.material-icons menu
+        include ./menu.pug
+        
 
-                        a.brand-logo(href="/")
-                            img(src="/images/black-transparent copy.png")
-                        ul#nav-mobile.right.hide-on-med-and-down
-                            li
-                                a.grey-text.text-darken-4(href="/") Home
-                            li
-                                a.grey-text.text-darken-4(href="/gallery") Gallery
-                            li
-                                a.grey-text.text-darken-4(href="/shop") Shop
-                            li
-                                a.grey-text.text-darken-4(href="/about") About
-                            li
-                                a.grey-text.text-darken-4(href="contact") Contact
-
-        ul#nav-mobile.sidenav
-            li
-                a(href="/") Home
-            li
-                a(href="/gallery") Gallery
-            li
-                a(href="/shop") Shop
-            li
-                a(href="/about") About
-            li
-                a(href="/contact") Contact
-
-        .container.white(style='height: 100px; width: 100vw;')
-            h5(style='text-align: center; padding-top: 29px; font-size: 40px; color: black') SpArc
         .container
+            h2.center Dashboard
+
             .row
-                .col.s4
-                    a(style='color: black')
-                        .card.grey.lighten-2(style='width: 300px;')
-                            .card-content.white-text
-                                span.card-title Projects
-                                p
-                                    | I am a very simple card. I am good at containing small bits of information.
-                                    br
-                                    br
-                                    a.col.s4(style='color: black', href='/product/create')  Add
-                                    a.col.s4(style='color: black', href='#')  Delete
-                                    a.col.s4(style='color: black', href='#')  Update
-                .col.s4
-                    a(style='color: black')
-                        .card.grey.lighten-2(style='width: 300px;')
-                            .card-content.white-text
-                                span.card-title Product
-                                p.white-text
-                                    | I am a very simple card. I am good at containing small bits of information.
-                                    br
-                                    br
-                                    a.col.s4(style='color: black', href='#')  Add
-                                    a.col.s4(style='color: black', href='#')  Delete
-                                    a.col.s4(style='color: black', href='#')  Update
+                
                 .col.s4
                     a(style='color: black')
                         .card.grey.lighten-2(style='width: 300px;')
@@ -84,4 +22,22 @@ html
                                     br
                                     a.col.s6(style='color: black', href='#')  Add
                                     a.col.s6(style='color: black', href='#')  Delete
-            include./footer.pug
+                                    
+                .col.s4
+                    .card
+                        .card-image
+                            img(src='/images/download.jpg')
+                            span.card-title Projects
+                        .card-action.row
+                                a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
+
+                                
+                .col.s4
+                    .card
+                        .card-image
+                            img(src='/images/download.jpg')
+                            span.card-title Projects
+                        .card-action.row
+                                a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
+
+        include  ./footer.pug
