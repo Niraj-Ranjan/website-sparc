@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 
 
+// User side pages -----
 
 router.get('/', function (req, res) {
     res.render('index');
@@ -15,14 +16,6 @@ router.get('/about', function (req, res) {
     res.render('about');
 });
 
-router.get('/trial', function (req, res) {
-    res.render('trial');
-});
-
-router.get('/homepage', function (req, res) {
-    res.render('homepage');
-});
-
 router.get('/gallery', function (req, res) {
     res.render('gallery');
 });
@@ -31,25 +24,17 @@ router.get('/shop', function (req, res) {
     res.render('shop');
 });
 
-router.get('/abbout', function (req, res) {
-    res.render('abbout');
+// -----
+
+// Admin routes -----
+
+router.get('/login', function (req, res) {
+    res.render('login');
 });
 
-router.get('/ec', function (req, res) {
-    res.render('ec');
-});
-
-router.get('/e-comm', function (req, res) {
-    res.render('e-comm');
-});
-
-router.get('/admin', function (req, res) {
-    res.render('admin');
-});
-
-router.get('/dashboard', function (req, res) {
+/*router.get('/dashboard', function (req, res) {
     res.render('dashboard');
-});
+});*/
 
 router.get('/updatepro', function (req, res) {
     res.render('updatepro');
@@ -62,40 +47,6 @@ router.get('/addpro', function (req, res) {
 router.get('/delpro', function (req, res) {
     res.render('delpro');
 });
-
-router.get('/404', function (req, res) {
-    res.render('404');
-});
-
-
-// Sample routes -----
-
-router.get("/shop/:id", function (req, res) {
-    res.send({
-        id: req.params.id,
-        name: "sample product",
-        description: "some really long description of non existing product",
-        cost: 300,
-        status: true,
-        categories: ["cat1", "cat2"]
-    });
-});
-
-router.get("/gallery/:id", function (req, res) {
-    res.send({
-        id: req.params.id,
-        name: "sample property",
-        owner: "some person",
-        date: Date.now,
-        description: "some really long description of non existing property",
-        cost: 300000,
-        url: "https://www.github.com",
-        categories: ["commercial", "office"],
-    });
-});
-
-// -----
-
 
 
 
@@ -141,6 +92,10 @@ router.get('/enquiry/:id', enquiry_controller.enquiry_detail);
 
 // GET request for list of all Enquiry items.
 router.get('/enquiries', enquiry_controller.enquiry_list);
+
+// GET request for list of all Enquiry items.
+router.get('/dashboard', enquiry_controller.dashboard_list);
+
 
 /// PRODUCT ROUTES ///
 
