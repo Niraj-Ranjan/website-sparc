@@ -1,8 +1,8 @@
 
 html
     head
-
-        link(href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css')
+        include ./head.pug
+        //- link(href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css')
         link(href='/css/404.css' rel='stylesheet' type='text/css')
 
 
@@ -10,12 +10,12 @@ html
 
 
         include ./menu.pug
-
-        p.mega
-            | 4
-            span.boom O
-            | 4
-            .bola
+        main
+            p.mega
+                | 4
+                span.boom O
+                | 4
+                .bola
 
 
         script(src="/js/jquery.min.js")
