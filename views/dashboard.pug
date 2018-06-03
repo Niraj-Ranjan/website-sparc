@@ -4,36 +4,46 @@ html
         title  Dashboard | SpArc
         include ./head.pug
     body(style='background-color:white;')
+        
         include ./menu.pug
         
 
-        .container
-            h2.center Dashboard
+        main
+            .container
+                h2.center Dashboard
 
-            .row            
-                .col.s4
-                    .card
-                        .card-image
-                            img(src='/images/download.jpg')
-                            span.card-title Projects
-                        .card-action.row
-                                a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
-                
-                .col.s4
-                    .card
-                        .card-image
-                            img(src='/images/download.jpg')
-                            span.card-title Projects
-                        .card-action.row
-                                a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
+                .row
+                    .col.s9
+                        .collection
+                            each enquiry in enquiries
+                                a.collection-item(href='javascript:viewenquiry("'+enquiry._id+'")') #{enquiry.comment}
+                            
+                            else
+                                p.center
+                                    a(href="#") No new enquiries. Click here to go to archives.
+                        
+                    .col.s3
+                        .collection
+                            a.collection-item All enquiries
+                            a.collection-item Manage Products
+                            a.collection-item Manage Projects
+                        
+            
+        
+
+            #enquiry-modal.modal
+                .modal-content
+                    .row
+                        h4.col.s9.light#enquiry-name
+                        .col.s3.grey-text#enquiry-date
+                    .row
+                        a.col.s6.truncate#enquiry-email
+                        a.col.s6#enquiry-phone
+                    .row
+                        blockquote.col.s12.light#enquiry-comment         
+
     
-                .col.s4
-                    .card
-                        .card-image
-                            img(src='/images/download.jpg')
-                            span.card-title Projects
-                        .card-action.row
-                                a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
-
-        include  ./footer.pug
+        include ./footer.pug
+        
+        script(src='/js/dashboard.js')
         
