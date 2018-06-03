@@ -1,0 +1,66 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+    body
+        include ./menu.pug
+
+        .container
+
+            h1.center products
+
+            div.collection.with-header
+                each product in products
+                    a.collection-item.avatar(onclick='populate("'+product.id+'")')
+                        //- img.circle(src=product.images, alt=product.name)
+                        img.circle(src='/images/xxx.jpg', alt=product.name)
+                        span.title.strong.grey-text.text-darken-2 #{product.name}
+                        p.black-text #{product.description}
+                        p.blue-text.text-lighten-1 Rs #{product.cost}
+
+                        //- .secondary-content
+                        //-     a(href='#')
+                        //-         i.material-icons.teal-text edit
+                        //-     a(href='#')
+                        //-         i.material-icons.teal-text delete
+
+                else
+                    p There are no products.
+        a.btn-floating.btn-large.waves-effect.waves-light.blue.modal-trigger(data-target='edit-modal')
+            i.material-icons add
+
+        #edit-modal.modal
+            .modal-content
+                form#product-form.container( method='POST')
+                    .row
+                        .input-field.col.s6
+                            input#product-name(type='text')
+                            label(for='name') Product Name
+
+                        .input-field.col.s6
+                            input#product-cost(type='number')
+                            label(for='cost') Cost
+
+                        .input-field.col.s12
+                            input#product-description(type='text')
+                            label(for='description') Description
+
+                        .file-field.input-field.col.s12
+                            .btn
+                                span Upload Image
+                                input#product-image(type='file')
+                            .file-path-wrapper
+                                input.file-path.validate(type='text')
+
+
+            .modal-footer
+                .container
+                    a.btn-flat.waves-effect.waves-red.red-text delete
+                    a.btn.waves-effect.waves-green.teal(onclick='$("#product-form").submit();') Save product
+
+
+
+        include ./footer.pug
+        script(src="/js/edit-products.js")
+

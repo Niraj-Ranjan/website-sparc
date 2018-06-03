@@ -1,3 +1,4 @@
+doctype html
 html
     head
         title  Dashboard | SpArc
@@ -9,20 +10,7 @@ html
         .container
             h2.center Dashboard
 
-            .row
-                
-                .col.s4
-                    a(style='color: black')
-                        .card.grey.lighten-2(style='width: 300px;')
-                            .card-content.black-text
-                                span.card-title Enquiries
-                                p
-                                    | I am a very simple card. I am good at containing small bits of information.
-                                    br
-                                    br
-                                    a.col.s6(style='color: black', href='#')  Add
-                                    a.col.s6(style='color: black', href='#')  Delete
-                                    
+            .row            
                 .col.s4
                     .card
                         .card-image
@@ -30,8 +18,15 @@ html
                             span.card-title Projects
                         .card-action.row
                                 a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
-
-                                
+                
+                .col.s4
+                    .card
+                        .card-image
+                            img(src='/images/download.jpg')
+                            span.card-title Projects
+                        .card-action.row
+                                a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
+    
                 .col.s4
                     .card
                         .card-image
@@ -41,3 +36,4 @@ html
                                 a.col.s4.btn.btn-flat.waves-effect.waves0-red(href='#') View
 
         include  ./footer.pug
+        

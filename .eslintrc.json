@@ -5,6 +5,7 @@
     },
     "extends": "eslint:recommended",
     "rules": {
+        "no-console": 0,
         "indent": [
             "warn",
             4
@@ -15,8 +16,9 @@
         ],
         "quotes": [
             "warn",
-            "double"
+            "single"
         ],
+
         "semi": [
             "error",
             "always"

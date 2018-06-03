@@ -1,6 +1,8 @@
+/* eslint-env node */
+
 // ----- Initialize Express -----
 
-var express = require("express");
+var express = require('express');
 var app = express();
 
 
@@ -10,9 +12,9 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
-var dbport = "mongodb://sparc:sparcpassword@ds119449.mlab.com:19449/sparc";
+var dbport = 'mongodb://sparc:sparcpassword@ds119449.mlab.com:19449/sparc';
 
-var routes = require("./routes.js");
+var routes = require('./routes.js');
 
 
 
@@ -20,7 +22,7 @@ var routes = require("./routes.js");
 // ----- Middleware -----
 
 //Import the mongoose module
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
 //Set up default mongoose connection
 mongoose.connect(dbport);
@@ -78,6 +80,6 @@ app.listen(port, function (err) {
         throw err;
     }
 
-    console.log("App listening on port " + port);
+    console.log('App listening on port ' + port);
 
 });

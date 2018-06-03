@@ -3,62 +3,96 @@ var router = express.Router();
 
 
 
-router.get('/', (req, res) => res.render('index'));
+router.get('/', function (req, res) {
+    res.render('index');
+});
 
-router.get('/contact', (req, res) => res.render('contact'));
+router.get('/contact', function (req, res) {
+    res.render('contact');
+});
 
-router.get('/about', (req, res) => res.render('about'));
+router.get('/about', function (req, res) {
+    res.render('about');
+});
 
-router.get('/trial', (req, res) => res.render('trial'));
+router.get('/trial', function (req, res) {
+    res.render('trial');
+});
 
-router.get('/homepage', (req, res) => res.render('homepage'));
+router.get('/homepage', function (req, res) {
+    res.render('homepage');
+});
 
-router.get('/gallery', (req, res) => res.render('gallery'));
+router.get('/gallery', function (req, res) {
+    res.render('gallery');
+});
 
-router.get('/shop', (req, res) => res.render('shop'));
+router.get('/shop', function (req, res) {
+    res.render('shop');
+});
 
-router.get('/abbout', (req, res) => res.render('abbout'));
+router.get('/abbout', function (req, res) {
+    res.render('abbout');
+});
 
-router.get('/ec', (req, res) => res.render('ec'));
+router.get('/ec', function (req, res) {
+    res.render('ec');
+});
 
-router.get('/e-comm', (req, res) => res.render('e-comm'));
+router.get('/e-comm', function (req, res) {
+    res.render('e-comm');
+});
 
-router.get('/admin', (req, res) => res.render('admin'));
+router.get('/admin', function (req, res) {
+    res.render('admin');
+});
 
-router.get('/dashboard', (req, res) => res.render('dashboard'));
+router.get('/dashboard', function (req, res) {
+    res.render('dashboard');
+});
 
-router.get('/updatepro', (req, res) => res.render('updatepro'));
+router.get('/updatepro', function (req, res) {
+    res.render('updatepro');
+});
 
-router.get('/addpro', (req, res) => res.render('addpro'));
+router.get('/addpro', function (req, res) {
+    res.render('addpro');
+});
 
-router.get('/delpro', (req, res) => res.render('delpro'));
+router.get('/delpro', function (req, res) {
+    res.render('delpro');
+});
 
-router.get('/404', (req, res) => res.render('404'));
-
-47501
+router.get('/404', function (req, res) {
+    res.render('404');
+});
 
 
 // Sample routes -----
 
-router.get("/shop/:id", (req, res) => res.send({
-    id: req.params.id,
-    name: "sample product",
-    description: "some really long description of non existing product",
-    cost: 300,
-    status: true,
-    categories: ["cat1", "cat2"]
-}));
+router.get("/shop/:id", function (req, res) {
+    res.send({
+        id: req.params.id,
+        name: "sample product",
+        description: "some really long description of non existing product",
+        cost: 300,
+        status: true,
+        categories: ["cat1", "cat2"]
+    });
+});
 
-router.get("/gallery/:id", (req, res) => res.send({
-    id: req.params.id,
-    name: "sample property",
-    owner: "some person",
-    date: Date.now,
-    description: "some really long description of non existing property",
-    cost: 300000,
-    url: "https://www.github.com",
-    categories: ["commercial", "office"],
-}));
+router.get("/gallery/:id", function (req, res) {
+    res.send({
+        id: req.params.id,
+        name: "sample property",
+        owner: "some person",
+        date: Date.now,
+        description: "some really long description of non existing property",
+        cost: 300000,
+        url: "https://www.github.com",
+        categories: ["commercial", "office"],
+    });
+});
 
 // -----
 
@@ -133,6 +167,9 @@ router.get('/product/:id', product_controller.product_detail);
 
 // GET request for list of all products.
 router.get('/products', product_controller.product_list);
+
+// GET request for list of all products.
+router.get('/products/edit', product_controller.product_edit);
 
 /// CATEGORY ROUTES ///
 

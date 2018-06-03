@@ -32,7 +32,7 @@ var ProductSchema = new Schema({
 ProductSchema
     .virtual('images')
     .get(function () {
-        return '/catalog/product/' + this._id;
+        return '/catalog/products/' + this._id;
     });
 
 //Export model
