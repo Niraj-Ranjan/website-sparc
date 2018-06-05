@@ -1,5 +1,20 @@
 /* eslint-env node */
 
+
+
+
+var mime = require('mime');
+var multer = require('multer');
+
+
+
+// -----
+
+
+
+
+
+
 var Product = require('../models/product');
 
 // Display list of all Products.
@@ -54,20 +69,56 @@ exports.product_detail = function (req, res) {
 exports.product_create_post = function (req, res) {
     // Create a Book object with escaped and trimmed data.
     var product = new Product({
-        name: req.body.product_name,
-        description: req.body.product_description,
-        cost: req.body.product_cost
+        //name: req.body.product_name,
+        //description: req.body.product_description,
+        //cost: req.body.product_cost
     });
 
-    product.save(function (err) {
+
+    var storage = multer.diskStorage({
+        destination: './www/catalog/product',
+        filename: function (req, file, cb) {
+
+            cb(null, product._id + '.' + mime.getExtension(file.mimetype));
+        }
+    });
+
+    var upload = multer({
+        storage: storage
+    }).any();
+
+    upload(req, res, function (err) {
         if (err) {
             throw err;
+            //return res.end('Error uploading file.');
+        } else {
+            //console.log(req.body);
+            //console.log(req.files);
+
+
+            product.name = req.body.product_name;
+            product.description = req.body.product_description;
+            product.cost = req.body.product_cost;
+            product.imagetype = mime.getExtension(req.files[0].mimetype);
+            //console.log(product);
+
+            product.save(function (err) {
+                if (err) {
+                    throw err;
+                }
+                //successful - redirect to new book record.
+                res.redirect('/dashboard/products');
+            });
+
+            //res.end("File has been uploaded");
         }
-        //successful - redirect to new book record.
-        res.redirect('/dashboard/products');
     });
 
+    /*
+        
+    */
 
+    //console.log(req.body);
     //res.send('request recieved for product' + product.name);
 };
 
@@ -88,19 +139,46 @@ exports.product_delete_post = function (req, res) {
 
 // Handle Product update on POST.
 exports.product_update_post = function (req, res) {
-    var product = new Product({
-        name: req.body.product_name,
-        description: req.body.product_description,
-        cost: req.body.product_cost,
-        _id: req.params.id
+    var product = new Product();
+
+
+    var storage = multer.diskStorage({
+        destination: './www/catalog/product',
+        filename: function (req, file, cb) {
+
+            cb(null, req.params.id + '.' + mime.getExtension(file.mimetype));
+        } 
     });
 
-    Product.findByIdAndUpdate(req.params.id, product, {}, function (err) {
+    var upload = multer({
+        storage: storage
+    }).any();
+
+    upload(req, res, function (err) {
         if (err) {
             throw err;
+        } else {
+
+            product.name = req.body.product_name;
+            product.description = req.body.product_description;
+            product.cost = req.body.product_cost;
+            product._id = req.params.id;
+            product.imagetype = mime.getExtension(req.files[0].mimetype);
+
+
+            Product.findByIdAndUpdate(req.params.id, product, {}, function (err) {
+                if (err) {
+                    throw err;
+                }
+                //successful - redirect to new book record.
+                res.redirect('/dashboard/products');
+            });
+
         }
-        //successful - redirect to new book record.
-        res.redirect('/dashboard/products');
     });
+
+
+
+    
     //res.send('NOT IMPLEMENTED: Product update POST. id=' + req.params.id);
 };

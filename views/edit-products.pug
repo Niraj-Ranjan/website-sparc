@@ -14,9 +14,9 @@ html
                     .col.s12.m8.l9
                         .collection.with-header
                             each product in products
-                                a.collection-item.avatar(onclick='populate("'+product.id+'")')
+                                a.collection-item.avatar(href='javascript:populate("'+product.id+'")')
                                     //- img.circle(src=product.images, alt=product.name)
-                                    img.circle.materialboxed(src='/images/xxx.jpg', alt=product.name)
+                                    img.circle.materialboxed(src=product.imageurl, alt=product.name)
                                     span.title.strong.grey-text.text-darken-2 #{product.name}
                                     p.black-text #{product.description}
                                     p.blue-text.text-lighten-1 Rs #{product.cost}
@@ -45,7 +45,7 @@ html
             #edit-modal.modal
                 .modal-content
                     h4#modal-heading.center Edit
-                    form#product-form.container( method='POST')
+                    form#product-form.container(enctype='multipart/form-data', method='POST')
                         .row
                             .input-field.col.s6
                                 input#product-name(type='text', name='product_name')

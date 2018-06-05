@@ -21,6 +21,11 @@ var ProductSchema = new Schema({
         type: Boolean,
         required: true,
         default:true
+    },
+    imagetype: {
+        type:String,
+        max: 10,
+        default: 'png'
     }
     /*categories: [{
         type: Schema.ObjectId,
@@ -31,9 +36,9 @@ var ProductSchema = new Schema({
 // Virtual for product's images
 
 ProductSchema
-    .virtual('images')
+    .virtual('imageurl')
     .get(function () {
-        return '/catalog/products/' + this._id;
+        return '/catalog/product/' + this._id + '.' + this.imagetype;
     });
 
 //Export model
