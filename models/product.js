@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
@@ -19,12 +19,13 @@ var ProductSchema = new Schema({
     },
     status: {
         type: Boolean,
-        required: true
-    },
-    categories: [{
+        required: true,
+        default:true
+    }
+    /*categories: [{
         type: Schema.ObjectId,
         ref: 'ProductCategory'
-    }]
+    }]*/
 });
 
 // Virtual for product's images
