@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
@@ -38,11 +38,11 @@ var ProjectSchema = new Schema({
 // Virtual for product's images
 
 ProjectSchema
-    .virtual("images")
+    .virtual('images')
     .get(function () {
-        return "/catalog/project/" + this._id;
+        return '/catalog/project/' + this._id;
     });
 
 //Export model
-module.exports = mongoose.model("Project", ProjectSchema);
+module.exports = mongoose.model('Project', ProjectSchema);
 
