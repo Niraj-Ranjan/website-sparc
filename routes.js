@@ -99,7 +99,9 @@ router.get('/dashboard', enquiry_controller.dashboard_list);
 
 
 // GET request for creating product.
-router.get('/product/create', product_controller.product_edit);
+router.get('/product/create', function (req, res) {
+    res.redirect('/dashboard/products');
+});
 
 // POST request for creating product.
 router.post('/product/create', product_controller.product_create_post);
