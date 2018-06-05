@@ -1,0 +1,84 @@
+doctype html
+html
+    head
+        title SpArc Shop
+        include ./head.pug
+    body
+        include ./menu.pug
+
+        main
+            .container
+
+                h3.center Projects
+                .row
+                    .col.s12.m9
+                        .collection.with-header
+                            each project in projects
+                                a.collection-item.avatar(onclick='populate("'+project.id+'")')
+                                    //- img.circle(src=project.images, alt=project.name)
+                                    img.circle.materialboxed(src='/images/xxx.jpg', alt=project.name)
+                                    span.title.strong.grey-text.text-darken-2 #{project.name}
+                                    p.black-text #{project.description}
+                                    p.blue-text.text-lighten-1 Rs #{project.cost}
+
+                                
+
+                            else
+                                p There are no projects.
+
+                    .col.s3
+                        .collection
+                            a.waves-effect.waves-light.collection-item.modal-trigger(data-target='edit-modal', onclick='clearproject()') Add project
+                                i.material-icons.left add
+
+
+                        include ./adminmenu.pug
+
+
+            #edit-modal.modal
+                .modal-content
+                    h4#modal-heading.center Edit
+                    form#product-form.container( method='POST')
+                        .row
+                            .input-field.col.s6
+                                input#product-name(type='text', name='product-name')
+                                label(for='product-name') Project Name
+
+                            .input-field.col.s6
+                                input#product-cost(type='number', name='product-cost')
+                                label(for='product-cost') Cost
+
+                            .input-field.col.s12
+                                input#product-description(type='text', name='product-description')
+                                label(for='product-description') Description
+
+                            .file-field.input-field.col.s12
+                                .btn
+                                    span Upload Image
+                                    input#product-image(type='file', name='product-image')
+                                .file-path-wrapper
+                                    input.file-path.validate(type='text')
+
+                .modal-footer
+                    .container
+                        a.btn-flat.waves-effect.waves-red.red-text delete  
+                        a.btn.waves-effect.waves-green.teal(onclick='$("#product-form").submit();') Save product
+                            i.material-icons.left save
+
+
+            #category-modal.modal
+                .modal-content
+                    h4.center Add category
+                    form#category-form.container(action='#' method='POST')
+                        .row
+                            .input-field.col.s12
+                                input#category(type='text')
+                                label(for='category') Category name
+
+                        button.btn.waves-effect.waves-green.teal(type='submit') add category
+
+
+
+        include ./footer.pug
+        script(src="/js/edit-products.js")
+
