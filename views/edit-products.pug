@@ -15,8 +15,8 @@ html
                         .collection.with-header
                             each product in products
                                 a.collection-item.avatar(href='javascript:populate("'+product.id+'")')
-                                    //- img.circle(src=product.images, alt=product.name)
-                                    img.circle.materialboxed(src=product.imageurl, alt=product.name)
+                                    img.circle(src=product.imageurl, alt=product.name)
+                                    //- img.circle.materialboxed(src=product.imageurl, alt=product.name)
                                     span.title.strong.grey-text.text-darken-2 #{product.name}
                                     p.black-text #{product.description}
                                     p.blue-text.text-lighten-1 Rs #{product.cost}

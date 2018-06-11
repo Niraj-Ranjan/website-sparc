@@ -125,7 +125,7 @@ exports.product_create_post = function (req, res) {
 
 // Handle Product delete on POST.
 exports.product_delete_post = function (req, res) {
-    Product.findByIdAndRemove(req.params.id, function deleteAuthor(err) {
+    Product.findByIdAndRemove(req.params.id, function (err) {
         if (err) {
             throw err;
         }
@@ -147,7 +147,7 @@ exports.product_update_post = function (req, res) {
         filename: function (req, file, cb) {
 
             cb(null, req.params.id + '.' + mime.getExtension(file.mimetype));
-        } 
+        }
     });
 
     var upload = multer({
@@ -179,6 +179,6 @@ exports.product_update_post = function (req, res) {
 
 
 
-    
+
     //res.send('NOT IMPLEMENTED: Product update POST. id=' + req.params.id);
 };
