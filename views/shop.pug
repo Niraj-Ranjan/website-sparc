@@ -9,10 +9,10 @@ html
         main
             h3.center Shop
 
-            .container
+            .container.shop
                 .row
                     each product in products
-                        .col.s6.l4
+                        .col.s6.l4.shop-item
 
                             .card.z-depth-2.hoverable
                                 .card-image
@@ -31,4 +31,5 @@ html
                         p There are no products.
 
         include ./footer.pug
+        script(src='/js/masonry.pkgd.min.js')
         script(type='text/javascript', src='/js/shop.js')
