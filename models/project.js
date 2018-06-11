@@ -19,7 +19,8 @@ var ProjectSchema = new Schema({
     },
     date: {
         type: Date,
-        required: true
+        required: true,
+        default: new Date()
     },
     cost: {
         type: Number,
@@ -32,15 +33,20 @@ var ProjectSchema = new Schema({
     categories: [{
         type: String,
         max: 100
-    }]
+    }],
+    imagetype: {
+        type:String,
+        max: 10,
+        default: 'png'
+    }
 });
 
 // Virtual for product's images
 
 ProjectSchema
-    .virtual('images')
+    .virtual('imageurl')
     .get(function () {
-        return '/catalog/project/' + this._id;
+        return '/catalog/project/' + this._id + '.' + this.imagetype;
     });
 
 //Export model

@@ -3,9 +3,15 @@
 (function ($) {
     $(function () {
 
-
+        //var sidenav = document.querySelector('.sidenav');
+        //sidenavinstance = M.Sidenav.init(sidenav);
         // Navbar
-        $(".button-collapse").sideNav();
+        // $(".button-collapse").sideNav();
+
+
+        $('.parallax').parallax();
+
+
         var categories = $('nav .categories-container');
         if (categories.length) {
             categories.pushpin({
@@ -65,9 +71,9 @@
         var $masonry = $('.gallery');
         $masonry.masonry({
             // set itemSelector so .grid-sizer is not used in layout
-            itemSelector: '.gallery-filter',
+            itemSelector: '.gallery-item',
             // use element for option
-            columnWidth: '.gallery-filter',
+            columnWidth: '.gallery-item',
             // no transitions
             transitionDuration: 0
         });
@@ -79,21 +85,6 @@
             e.preventDefault();
         });
 
-
-
-        // Contact Form Icon
-        $("form .form-control").focus(function () {
-            $(this).siblings("label").first().children("i").first().css({
-                "color": "#aaa",
-                "left": 0
-            });
-        });
-        $("form .form-control").blur(function () {
-            $(this).siblings("label").first().children("i").first().css({
-                "color": "transparent",
-                "left": "-20px"
-            });
-        });
 
 
         var onShow = function (el) {
