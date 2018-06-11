@@ -20,7 +20,9 @@ router.get('/privacypolicy', function (req, res) {
     res.render('privacypolicy');
 });
 
-
+router.get('/logout', function (req, res) {
+    res.redirect('/');
+});
 /* implemented in project routes -----
 router.get('/gallery', function (req, res) {
     res.render('gallery');
@@ -142,9 +144,7 @@ router.get('/project/:id', project_controller.project_detail);
 // GET request for list of all project.
 router.get('/dashboard/projects', project_controller.project_edit);
 
-router.get('/gallery', function (req, res) {
-    res.render('gallery');
-});
+router.get('/gallery', project_controller.project_list);
 
 
 
