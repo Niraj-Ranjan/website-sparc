@@ -84,9 +84,6 @@ router.post('/enquiry/create', enquiry_controller.enquiry_create_post);
 // POST request to delete Enquiry.
 router.get('/enquiry/:id/delete', enquiry_controller.enquiry_delete_post);
 
-// POST request to update Enquiry.
-router.post('/enquiry/:id/update', enquiry_controller.enquiry_update_post);
-
 // GET request for one Enquiry.
 router.get('/enquiry/:id', enquiry_controller.enquiry_detail);
 
