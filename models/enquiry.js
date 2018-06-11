@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
@@ -18,7 +18,8 @@ var EnquirySchema = new Schema({
     },
     status: {
         type: Boolean,
-        required: true
+        required: true,
+        default: true
     },
     phone: [{
         type: String,
