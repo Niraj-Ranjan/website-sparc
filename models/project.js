@@ -5,30 +5,35 @@ var Schema = mongoose.Schema;
 var ProjectSchema = new Schema({
     name: {
         type: String,
-        required: true,
-        max: 100
+        //required: true,
+        max: 100,
+        default: "unknown"
     },
     owner: {
         type: String,
-        required: true,
-        max: 100
+        //required: true,
+        max: 100,
+        default: "unknown"
     },
     description: {
         type: String,
-        max: 1000
+        max: 1000,
+        default: "unknown"
     },
     date: {
         type: Date,
-        required: true,
+        //required: true,
         default: new Date()
     },
     cost: {
         type: Number,
-        required: true,
+        //required: true,
         min: 0,
+        default: 0
     },
     url: {
         type: String,
+        default: ""
     },
     categories: [{
         type: String,
