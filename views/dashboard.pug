@@ -3,7 +3,7 @@ html
     head
         title  Dashboard | SpArc
         include ./head.pug
-    body(style='background-color:white;')
+    body
         
         include ./menu.pug
         
@@ -16,11 +16,16 @@ html
                     .col.s9
                         .collection
                             each enquiry in enquiries
-                                a.collection-item(href='javascript:viewenquiry("'+enquiry._id+'")') #{enquiry.comment}
+                                div.collection-item
+                                    a(href='javascript:viewenquiry("'+enquiry._id+'")') #{enquiry.comment}
+                                    if enquiry.status
+                                        span.new.badge
+                                    a.right(href='javascript:deleteenquiry("'+enquiry._id+'")')
+                                        i.material-icons close
                             
                             else
                                 p.center
-                                    a(href="href='/dashboard/enquiries'") No new enquiries. Click here to go to archives.
+                                    a(href='/dashboard/enquiries') No new enquiries. Click here to go to archives.
                         
                     .col.s3
                         include ./adminmenu.pug
