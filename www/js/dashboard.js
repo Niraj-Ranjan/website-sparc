@@ -23,3 +23,13 @@ function viewenquiry(id) {
 
 
 }
+
+function deleteenquiry(id) {
+
+    if(confirm('Are you sure you want to delete?')){
+        $.get('/enquiry/' + id + '/delete', function(){
+            document.location.reload();
+        });
+    }
+    
+}
