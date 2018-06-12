@@ -6,7 +6,7 @@ function enquire(id) {
         name: sessionStorage.getItem('username'),
         email: sessionStorage.getItem('email'),
         phone: sessionStorage.getItem('phone')
-    }
+    };
 
 
 
