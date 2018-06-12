@@ -3,9 +3,11 @@ var Product = require('../models/product');
 
 // Display list of all Enquirys.
 exports.enquiry_list = function (req, res) {
-    Enquiry.find({},'_id comment status', {sort:{
-        date: -1 //Sort by Date Added DESC
-    }})
+    Enquiry.find({}, '_id comment status', {
+        sort: {
+            date: -1 //Sort by Date Added DESC
+        }
+    })
         .exec(function (err, list_all) {
             if (err) {
                 throw err;
@@ -21,9 +23,15 @@ exports.enquiry_list = function (req, res) {
 
 // Display list of all Enquirys.
 exports.dashboard_list = function (req, res) {
-    Enquiry.find({status: true},'_id comment status', {sort:{
-        date: -1 //Sort by Date Added DESC
-    }})
+    Enquiry.find({
+        status: true
+    },
+    '_id comment status', 
+    {
+        sort: {
+            date: -1 //Sort by Date Added DESC
+        }
+    })
         .exec(function (err, list_unread) {
             if (err) {
                 throw err;
@@ -64,9 +72,11 @@ exports.enquiry_detail = function (req, res) {
 
 // Handle Enquiry create on POST.
 exports.enquiry_create_post = function (req, res) {
+
+
     Product.findById(req.body.productid)
         .exec(function (err, pro) {
-            
+
             var enquiry = new Enquiry({
                 name: req.body.name,
                 comment: req.body.comment,
@@ -90,6 +100,38 @@ exports.enquiry_create_post = function (req, res) {
             //res.send('NOT IMPLEMENTED: Enquiry create POST');
         });
 };
+
+
+// Handle Enquiry create on POST.
+exports.enquiry_contact_create_post = function (req, res) {
+
+    //console.log(req.body);
+
+    var enquiry = new Enquiry({
+        name: req.body.name,
+        comment: req.body.comment,
+        email: req.body.email,
+        phone: req.body.phone
+    });
+
+    //console.log(enquiry);
+
+    //res.send('NOT IMPLEMENTED: Enquiry create POST');
+
+    enquiry.save(function (err) {
+        if (err) {
+            throw err;
+        }
+    
+        res.render('contact',{
+            status: true
+        });
+    });
+
+
+
+};
+
 
 // Display Enquiry delete form on GET.
 exports.enquiry_delete_get = function (req, res) {
