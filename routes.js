@@ -82,7 +82,7 @@ var project_controller = require('./controllers/projectController');
 router.post('/enquiry/create', enquiry_controller.enquiry_create_post);
 
 // POST request to delete Enquiry.
-router.get('/enquiry/:id/delete', enquiry_controller.enquiry_delete_post);
+router.get('/enquiry/:id/delete', enquiry_controller.enquiry_delete_get);
 
 // GET request for one Enquiry.
 router.get('/enquiry/:id', enquiry_controller.enquiry_detail);
