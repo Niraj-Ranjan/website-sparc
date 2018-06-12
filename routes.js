@@ -9,7 +9,9 @@ router.get('/', function (req, res) {
 });
 
 router.get('/contact', function (req, res) {
-    res.render('contact');
+    res.render('contact',  {
+        status: false
+    });
 });
 
 router.get('/about', function (req, res) {
@@ -80,6 +82,8 @@ var project_controller = require('./controllers/projectController');
 
 // POST request for creating Enquiry.
 router.post('/enquiry/create', enquiry_controller.enquiry_create_post);
+
+router.post('/enquiry/contact', enquiry_controller.enquiry_contact_create_post);
 
 // POST request to delete Enquiry.
 router.get('/enquiry/:id/delete', enquiry_controller.enquiry_delete_get);
