@@ -2,17 +2,36 @@
 
 function enquire(id) {
 
-    var username = localStorage.getItem('username');
-    var email = localStorage.getItem('email');
-    var phone = localStorage.getItem('phone');
+    var user = {
+        name: sessionStorage.getItem('username'),
+        email: sessionStorage.getItem('email'),
+        phone: sessionStorage.getItem('phone')
+    }
 
-    $.get('/product/' + id, function (product) {
+
+
+    //while (user.email == null || user.email == 'null' || user.email == '') {
+    if (user.email == null || user.email == 'null' || user.email == '') {
+        user.name = prompt('Enter you name:');
+        user.email = prompt('Enter you email:');
+        user.phone = prompt('Enter you phone:');
+
+        sessionStorage.setItem('username', user.name);
+        sessionStorage.setItem('email', user.email);
+        sessionStorage.setItem('phone', user.phone);
+    }
+
+    user.productid = id;
+
+    /**/
+    $.post('/enquiry/create', user, function (product) {
         M.toast({
-            html: 'Product Found ' + product.name
+            html: 'Enquiry sent for ' + product.name
         });
     });
 
-
+    /**/
+    //console.log(user);
 }
 
 
@@ -22,7 +41,7 @@ function enquire(id) {
 (function ($) {
     $(function () {
 
-        
+
 
         // Masonry Grid
         var $masonry = $('.shop');
