@@ -1,5 +1,14 @@
 /* eslint-env browser, jquery */
 
+
+function deleteproduct (id) {
+    if(confirm('Are you sure you want to delete?')){
+        $.get('/product/' + id + '/delete', function(){
+            document.location.reload();
+        });
+    }
+}
+
 function populate(id) {
 
     $.get('/product/' + id, {}, function (product) {
@@ -14,7 +23,7 @@ function populate(id) {
         $('#product-name').val(product.name).focus();
 
         $('#product-form').attr('action', '/product/' + id + '/update');
-        $('#delete-btn').attr('href', '/product/' + id + '/delete');
+        $('#delete-btn').attr('href', 'javascript:deleteproduct("' + id + '");');
 
         //console.log(product._id)
     });

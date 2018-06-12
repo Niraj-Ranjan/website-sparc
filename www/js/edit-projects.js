@@ -1,5 +1,13 @@
 /* eslint-env browser, jquery */
 
+function deleteproject (id) {
+    if(confirm('Are you sure you want to delete?')){
+        $.get('/project/' + id + '/delete', function(){
+            document.location.reload();
+        });
+    }
+}
+
 function populate(id) {
 
     $.get('/project/' + id, {}, function (project) {
@@ -17,7 +25,7 @@ function populate(id) {
         $('#project-name').val(project.name).focus();
 
         $('#project-form').attr('action', '/project/' + id + '/update');
-        $('#delete-btn').attr('href', '/project/' + id + '/delete');
+        $('#delete-btn').attr('href', 'javascript:deleteproject("' + id + '");');
 
         //console.log(product._id)
     });
