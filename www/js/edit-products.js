@@ -43,7 +43,7 @@ function clearproduct() {
     $('#product-name').val('').focus();
 
     $('#product-form').attr('action', '/product/create');
-    
+
     $('#delete-btn').attr('href', '!#');
 
 

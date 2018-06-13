@@ -21,7 +21,7 @@ html
                                     p.black-text #{product.description}
                                     p.blue-text.text-lighten-1 Rs #{product.cost}
 
-                                
+
 
                             else
                                 p There are no products.
@@ -33,11 +33,11 @@ html
 
                         //- a.waves-effect.waves-light.collection-item.modal-trigger(data-target='category-modal') Add category
                                 i.material-icons.left playlist_add
-                            
-                            
+
+
                             a.waves-effect.waves-light.collection-item.modal-trigger(data-target='category-edit-modal') Manage categories
                                 i.material-icons.left playlist_add_check
-                    
+
 
                         include ./adminmenu.pug
 
@@ -68,11 +68,11 @@ html
 
                 .modal-footer
                     .container
-                        a#delete-btn.btn-flat.waves-effect.waves-red.red-text delete  
+                        a#delete-btn.btn-flat.waves-effect.waves-red.red-text delete
                         a.btn.waves-effect.waves-green.teal(onclick='$("#product-form").submit();') Save product
                             i.material-icons.left save
 
-            
+
                 //- #category-modal.modal
                     .modal-content
                         h4.center Add category

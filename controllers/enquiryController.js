@@ -26,7 +26,7 @@ exports.dashboard_list = function (req, res) {
     Enquiry.find({
         status: true
     },
-    '_id comment status', 
+    '_id comment status',
     {
         sort: {
             date: -1 //Sort by Date Added DESC
@@ -122,7 +122,7 @@ exports.enquiry_contact_create_post = function (req, res) {
         if (err) {
             throw err;
         }
-    
+
         res.render('contact',{
             status: true
         });

@@ -31,5 +31,5 @@ function deleteenquiry(id) {
             document.location.reload();
         });
     }
-    
+
 }

@@ -7,14 +7,14 @@ html(lang='en')
     body
         include ./menu.pug
         main.valign-wrapper
-            
+
             .container
                 .row
                     .col.s12.m8.push-m2.l4.push-l4
                         .card.z-depth-2.hoverable
                             .card-image.waves-effect.waves-block.waves-light
                                 img.activator(src='/images/login.jpg', alt='background image')
-                                
+
                             .card-content
                                 span.card-title.activator.grey-text.text-darken-4 Log in
                                     i.material-icons.right more_vert
@@ -26,7 +26,7 @@ html(lang='en')
                             .card-reveal
                                 span.card-title.grey-text.text-darken-4 Log in
                                     i.material-icons.right close
-                                
+
                                 form#login-form.col.s12(method='post', action='/login')
                                     .row
                                         .input-field.col.s12
@@ -40,4 +40,3 @@ html(lang='en')
                                             a(href='#') Forgot password?
 
         include ./footer.pug
-        

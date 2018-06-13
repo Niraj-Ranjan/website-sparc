@@ -1,14 +1,14 @@
 doctype html
 html(lang='en')
     head
-        
+
         title Gallery
 
-        
-        
+
+
         include ./head.pug
-        link(href='/css/gallery-materialize.css', rel='stylesheet') 
-        link(href='/css/gallery.css', rel='stylesheet') 
+        link(href='/css/gallery-materialize.css', rel='stylesheet')
+        link(href='/css/gallery.css', rel='stylesheet')
 
 
     body
@@ -35,10 +35,10 @@ html(lang='en')
                                         span.price #{project.cost}
                                         p Finished on #{project.date}
                                     h5 Owner #{project.owner}
-                                    p Homepage: 
+                                    p Homepage:
                                         a(href=project.url) #{project.url}
                                     p.description #{project.description}
-                                        
+
                                         //- .carousel-wrapper
                                             .carousel
                                                 a.carousel-item(href='#one!')
@@ -51,11 +51,11 @@ html(lang='en')
                                                     img(src='http://placehold.it/300x200')
                                                 a.carousel-item(href='#five!')
                                                     img(src='http://placehold.it/300x200')
-                                
+
                                 //- .gallery-action
                                     a.btn-floating.btn-large.waves-effect.waves-light
                                         i.material-icons favorite
-                    
+
 
 
         include ./footer.pug
