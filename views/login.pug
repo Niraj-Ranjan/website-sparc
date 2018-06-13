@@ -1,30 +1,42 @@
 doctype html
 html(lang='en')
     head
-        title admin | panel
-        link(rel='stylesheet', href='/css/admin.css')
+        title Log in | SpArc
+        include ./head.pug
+        link(rel="stylesheet", href="/css/login.css")
     body
-        include./menu.pug
-        .form-structor
-            .signup
-                h2#signup.form-title SpArc
-                .form-holder
-            .login.slide-up
-                .center
-                    h2#login.form-title Log in
-                    .form-holder
-                        input#username.input(type='text', placeholder='username')
-                        input#password.input(type='password', placeholder='Password')
-                    button.submit-btn(onclick='validate()') Log in
-            script
-                function validate() {
-                console.log("Enter val");
-                var username = document.getElementById("username").value;
-                var password = document.getElementById("password").value;
-                if (((username == "Sagar") && (password == "SpArc")) || ((username == "Shivani") && (password == "SpArc"))) {
-                window.location = "dashboard";
-                }
-                }
+        include ./menu.pug
+        main.valign-wrapper
 
-script(src='/js/admin.js')
-        include./menu.pug
+            .container
+                .row
+                    .col.s12.m8.push-m2.l4.push-l4
+                        .card.z-depth-2.hoverable
+                            .card-image.waves-effect.waves-block.waves-light
+                                img.activator(src='/images/login.jpg', alt='background image')
+
+                            .card-content
+                                span.card-title.activator.grey-text.text-darken-4 Log in
+                                    i.material-icons.right more_vert
+                                if failure
+                                    p.red-text Logging in failed.
+                                else
+                                    p Click to log in.
+
+                            .card-reveal
+                                span.card-title.grey-text.text-darken-4 Log in
+                                    i.material-icons.right close
+
+                                form#login-form.col.s12(method='post', action='/login')
+                                    .row
+                                        .input-field.col.s12
+                                            input#username.validate(type='text', name='username')
+                                            label(for='username') Username
+                                        .input-field.col.s12
+                                            input#password.validate(type='password', name='password')
+                                            label(for='password') Password
+                                        .col.s12
+                                            button.btn.right.waves-effect.waves-light(type='submit') Log in
+                                            a(href='#') Forgot password?
+
+        include ./footer.pug

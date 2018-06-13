@@ -1,15 +1,32 @@
+/* eslint-env node */
+
+
+
+
+var mime = require('mime');
+var multer = require('multer');
+
+
+
+// -----
+
+
+
+
+
+
 var Product = require('../models/product');
 
 // Display list of all Products.
 exports.product_list = function (req, res) {
     Product.find({})
-        .populate('categories')
+        //.populate('categories')
         .exec(function (err, list_products) {
             if (err) {
-                return next(err);
+                throw err;
             }
             //Successful, so render
-            res.render('products', {
+            res.render('shop', {
                 products: list_products
             });
             //res.send(list_products);
@@ -18,10 +35,10 @@ exports.product_list = function (req, res) {
 
 exports.product_edit = function (req, res) {
     Product.find({})
-        .populate('categories')
+        //.populate('categories')
         .exec(function (err, list_products) {
             if (err) {
-                return next(err);
+                throw err;
             }
             //Successful, so render
             res.render('edit-products', {
@@ -34,10 +51,10 @@ exports.product_edit = function (req, res) {
 // Display detail page for a specific Product.
 exports.product_detail = function (req, res) {
     Product.findById(req.params.id)
-        .populate('categories')
+        //.populate('categories')
         .exec(function (err, product) {
             if (err) {
-                return next(err);
+                throw err;
             }
             //Successful, so render
             //console.log(product)
@@ -47,32 +64,121 @@ exports.product_detail = function (req, res) {
     //res.send('NOT IMPLEMENTED: Product detail: ' + String(req.params.id));
 };
 
-// Display Product create form on GET.
-exports.product_create_get = function (req, res) {
-    res.render('addpro');
-};
 
 // Handle Product create on POST.
 exports.product_create_post = function (req, res) {
-    res.send('NOT IMPLEMENTED: Product create POST');
+    // Create a Book object with escaped and trimmed data.
+    var product = new Product({
+        //name: req.body.product_name,
+        //description: req.body.product_description,
+        //cost: req.body.product_cost
+    });
+
+
+    var storage = multer.diskStorage({
+        destination: './www/catalog/product',
+        filename: function (req, file, cb) {
+
+            cb(null, product._id + '.' + mime.getExtension(file.mimetype));
+        }
+    });
+
+    var upload = multer({
+        storage: storage
+    }).any();
+
+    upload(req, res, function (err) {
+        if (err) {
+            throw err;
+            //return res.end('Error uploading file.');
+        } else {
+            //console.log(req.body);
+            //console.log(req.files);
+
+
+            product.name = req.body.product_name;
+            product.description = req.body.product_description;
+            product.cost = req.body.product_cost;
+            product.imagetype = mime.getExtension(req.files[0].mimetype);
+            //console.log(product);
+
+            product.save(function (err) {
+                if (err) {
+                    throw err;
+                }
+                //successful - redirect to new book record.
+                res.redirect('/dashboard/products');
+            });
+
+            //res.end("File has been uploaded");
+        }
+    });
+
+    /*
+
+    */
+
+    //console.log(req.body);
+    //res.send('request recieved for product' + product.name);
 };
 
-// Display Product delete form on GET.
-exports.product_delete_get = function (req, res) {
-    res.send('NOT IMPLEMENTED: Product delete GET');
-};
 
 // Handle Product delete on POST.
 exports.product_delete_post = function (req, res) {
-    res.send('NOT IMPLEMENTED: Product delete POST');
+    Product.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            throw err;
+        }
+        // Success - go to author list
+        res.redirect('/dashboard/products');
+    });
+
+    //es.send('NOT IMPLEMENTED: Product delete POST');
 };
 
-// Display Product update form on GET.
-exports.product_update_get = function (req, res) {
-    res.send('NOT IMPLEMENTED: Product update GET');
-};
 
 // Handle Product update on POST.
 exports.product_update_post = function (req, res) {
-    res.send('NOT IMPLEMENTED: Product update POST. id=' + req.params.id);
+    var product = new Product();
+
+
+    var storage = multer.diskStorage({
+        destination: './www/catalog/product',
+        filename: function (req, file, cb) {
+
+            cb(null, req.params.id + '.' + mime.getExtension(file.mimetype));
+        }
+    });
+
+    var upload = multer({
+        storage: storage
+    }).any();
+
+    upload(req, res, function (err) {
+        if (err) {
+            throw err;
+        } else {
+
+            product.name = req.body.product_name;
+            product.description = req.body.product_description;
+            product.cost = req.body.product_cost;
+            product._id = req.params.id;
+            product.imagetype = mime.getExtension(req.files[0].mimetype);
+
+
+            Product.findByIdAndUpdate(req.params.id, product, {}, function (err) {
+                if (err) {
+                    throw err;
+                }
+                //successful - redirect to new book record.
+                res.redirect('/dashboard/products');
+            });
+
+        }
+    });
+
+
+
+
+    //res.send('NOT IMPLEMENTED: Product update POST. id=' + req.params.id);
 };

@@ -60,3 +60,15 @@ main {
 .no-overflow {
     overflow: hidden;
 }
+
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+
+.overflow-x-scroll {
+    overflow-x: scroll;
+}
+
+.fixed {
+    position: fixed;
+}
