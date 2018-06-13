@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var moment = require('moment');
 
 var Schema = mongoose.Schema;
 
@@ -7,34 +8,40 @@ var EnquirySchema = new Schema({
         type: String,
         //required: true,
         max: 100,
-        default: "unknown"
+        default: 'unknown'
     },
     comment: {
         type: String,
         max: 10000,
-        default: "nothing"
+        default: 'nothing'
     },
     email: {
         type: String,
         max: 100,
-        default: "unknown"
+        default: 'unknown'
     },
     status: {
         type: Boolean,
         //required: true,
         default: true
     },
-    phone: [{
+    phone: {
         type: String,
         max: 15,
-        default: "unknown"
-    }],
+        default: 'unknown'
+    },
     date: {
         type: Date,
         default: Date.now
     }
 });
 
+
+EnquirySchema.virtual('dateformatted').get(function () {
+    return moment(this.date).format('MMMM Do, YYYY');
+});
+
+
+
 //Export model
 module.exports = mongoose.model('Enquiry', EnquirySchema);
-
