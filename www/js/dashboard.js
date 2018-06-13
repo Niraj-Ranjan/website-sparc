@@ -31,8 +31,10 @@ function viewenquiry(id) {
 function deleteenquiry(id) {
 
     if(confirm('Are you sure you want to delete?')){
-        $.get('/enquiry/' + id + '/delete', function(){
-            document.location.reload();
+        $.post('/enquiry/' + id + '/delete', function(status){
+            if(status){
+                document.location.reload();
+            }
         });
     }
 

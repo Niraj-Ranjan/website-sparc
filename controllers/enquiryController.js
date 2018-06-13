@@ -140,6 +140,6 @@ exports.enquiry_delete_get = function (req, res) {
             throw err;
         }
         // Success - go to author list
-        res.redirect('/dashboard');
+        res.send(true);
     });
 };
