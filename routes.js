@@ -86,7 +86,7 @@ router.post('/enquiry/create', enquiry_controller.enquiry_create_post);
 router.post('/enquiry/contact', enquiry_controller.enquiry_contact_create_post);
 
 // POST request to delete Enquiry.
-router.get('/enquiry/:id/delete', enquiry_controller.enquiry_delete_get);
+router.post('/enquiry/:id/delete', enquiry_controller.enquiry_delete_get);
 
 // GET request for one Enquiry.
 router.get('/enquiry/:id', enquiry_controller.enquiry_detail);
@@ -110,7 +110,7 @@ router.get('/product/create', function (req, res) {
 router.post('/product/create', product_controller.product_create_post);
 
 // POST request to delete product.
-router.get('/product/:id/delete', product_controller.product_delete_post);
+router.post('/product/:id/delete', product_controller.product_delete_post);
 
 // POST request to update product.
 router.post('/product/:id/update', product_controller.product_update_post);

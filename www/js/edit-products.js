@@ -3,7 +3,7 @@
 
 function deleteproduct (id) {
     if(confirm('Are you sure you want to delete?')){
-        $.get('/product/' + id + '/delete', function(){
+        $.post('/product/' + id + '/delete', function(){
             document.location.reload();
         });
     }
