@@ -125,7 +125,7 @@ exports.project_delete_post = function (req, res) {
             throw err;
         }
         // Success - go to author list
-        res.send(true);      
+        res.send(true);
     });
 
     // res.send('NOT IMPLEMENTED: Project delete POST');
