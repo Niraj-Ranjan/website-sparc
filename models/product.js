@@ -7,12 +7,12 @@ var ProductSchema = new Schema({
         type: String,
         //required: true,
         max: 100,
-        default: "unknown"
+        default: 'unknown'
     },
     description: {
         type: String,
         max: 1000,
-        default: "unknown"
+        default: 'unknown'
     },
     cost: {
         type: Number,
