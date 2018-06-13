@@ -1,4 +1,4 @@
 node_modules
 **/.directory
-**/._DS_Store
+**/.DS_Store
 temp

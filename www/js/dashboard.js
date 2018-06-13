@@ -1,3 +1,6 @@
+/* eslint-env browser, jquery */
+
+
 function viewenquiry(id) {
 
     $.get('/enquiry/' + id, {}, function (enquiry) {
@@ -8,6 +11,7 @@ function viewenquiry(id) {
 
         $('#enquiry-name').html(enquiry.name);
         $('#enquiry-date').html(enquiry.date);
+        console.log(enquiry);
 
         $('#enquiry-email').html(enquiry.email);
         $('#enquiry-phone').html(enquiry.phone);

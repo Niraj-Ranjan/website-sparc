@@ -2,8 +2,10 @@
 
 function deleteproject (id) {
     if(confirm('Are you sure you want to delete?')){
-        $.post('/project/' + id + '/delete', function(){
-            document.location.reload();
+        $.post('/project/' + id + '/delete',{}, function (status){
+            if(status){
+                document.location.reload();
+            }
         });
     }
 }
