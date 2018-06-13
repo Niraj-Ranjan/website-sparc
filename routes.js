@@ -18,6 +18,10 @@ router.get('/about', function (req, res) {
     res.render('about');
 });
 
+router.get('/support', function (req, res) {
+    res.render('support');
+});
+
 router.get('/privacypolicy', function (req, res) {
     res.render('privacypolicy');
 });
@@ -134,7 +138,7 @@ router.get('/project/create', project_controller.project_edit);
 router.post('/project/create', project_controller.project_create_post);
 
 // POST request to delete project.
-router.get('/project/:id/delete', project_controller.project_delete_post);
+router.post('/project/:id/delete', project_controller.project_delete_post);
 
 // POST request to update project.
 router.post('/project/:id/update', project_controller.project_update_post);

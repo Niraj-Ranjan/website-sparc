@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var moment = require('moment');
 
 var Schema = mongoose.Schema;
 
@@ -53,6 +54,15 @@ ProjectSchema
     .get(function () {
         return '/catalog/project/' + this._id + '.' + this.imagetype;
     });
+
+
+ProjectSchema
+    .virtual('dateformatted')
+    .get(function () {
+        return moment(this.date).format('MMMM Do, YYYY');
+    });
+
+
 
 //Export model
 module.exports = mongoose.model('Project', ProjectSchema);
