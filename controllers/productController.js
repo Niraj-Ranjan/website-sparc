@@ -115,7 +115,7 @@ exports.product_create_post = function (req, res) {
     });
 
     /*
-        
+
     */
 
     //console.log(req.body);

@@ -18,6 +18,10 @@ router.get('/about', function (req, res) {
     res.render('about');
 });
 
+router.get('/support', function (req, res) {
+    res.render('support');
+});
+
 router.get('/privacypolicy', function (req, res) {
     res.render('privacypolicy');
 });
