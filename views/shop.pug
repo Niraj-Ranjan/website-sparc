@@ -7,7 +7,10 @@ html
         include ./menu.pug
 
         main
-            h3.center Shop
+            .parallax-container(style='height:100vh')
+                .parallax
+                    img.active(src='/images/coffee.jpg', alt='control room', style='filter: brightness(50%)')
+                h1.center.white-text(style='font-size:10em; font-weight:bold;margin-top:40vh;') Room of Art
 
             .container.shop
                 .row

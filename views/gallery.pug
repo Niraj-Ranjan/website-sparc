@@ -15,11 +15,10 @@ html(lang='en')
         include ./menu.pug
 
         main
-            .parallax-container.valign-wrapper(style='min-height:400px')
+            .parallax-container.valign-wrapper(style='height:100vh')
                 .parallax
-                    img.active(src='/images/trial.jpg', alt='control room')
-                .container
-                    h1.center.white-text Room of Art
+                    img.active(src='/images/gallery.jpg', alt='control room', style='filter: brightness(50%)')
+                h1.center.white-text(style='font-size:10em; font-weight:bold') Space. Form. Architecture.
 
             #portfolio.section.gray
                 .gallery.row
