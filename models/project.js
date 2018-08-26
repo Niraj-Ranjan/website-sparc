@@ -40,20 +40,17 @@ var ProjectSchema = new Schema({
         type: String,
         max: 100
     }],
-    imagetype: {
-        type:String,
-        max: 10,
-        default: 'png'
+    image: {
+        data: {
+            type: Buffer,   
+        },
+        contentType: {
+            type: String,
+            max: 15,
+            default: 'png'
+        }
     }
 });
-
-// Virtual for product's images
-
-ProjectSchema
-    .virtual('imageurl')
-    .get(function () {
-        return '/catalog/project/' + this._id + '.' + this.imagetype;
-    });
 
 
 ProjectSchema

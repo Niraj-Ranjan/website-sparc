@@ -2,7 +2,7 @@
 
 
 
-
+var fs = require('fs');
 var mime = require('mime');
 var multer = require('multer');
 
@@ -61,17 +61,12 @@ exports.project_detail = function (req, res) {
 exports.project_create_post = function (req, res) {
 
     // Create a Book object with escaped and trimmed data.
-    var project = new Project({
-        //name: req.body.product_name,
-        //description: req.body.product_description,
-        //cost: req.body.product_cost
-    });
+    var project = new Project({});
 
 
     var storage = multer.diskStorage({
-        destination: './www/catalog/project',
+        destination: './uploads',
         filename: function (req, file, cb) {
-
             cb(null, project._id + '.' + mime.getExtension(file.mimetype));
         }
     });
@@ -96,7 +91,10 @@ exports.project_create_post = function (req, res) {
             project.cost = req.body.project_cost;
             project.url = req.body.project_url;
             project.categories = req.body.project_categories;
-            project.imagetype = mime.getExtension(req.files[0].mimetype);
+
+
+            project.image.data = fs.readFileSync(req.files[0].path);
+            project.image.contentType = req.files[0].mimetype;
             //console.log(product);
 
             project.save(function (err) {
@@ -106,7 +104,11 @@ exports.project_create_post = function (req, res) {
                 //successful - redirect to new book record.
                 res.redirect('/dashboard/projects');
             });
-
+            fs.unlink(req.files[0].path, function (err) {
+                if (err) {
+                    throw err;
+                }
+            });
             //res.end("File has been uploaded");
             /**/
         }
@@ -188,4 +190,21 @@ exports.project_update_post = function (req, res) {
     });
 
     //res.send('NOT IMPLEMENTED: Project update POST');
+};
+
+// Display detail image for a specific Enquiry.
+exports.project_image_get = function (req, res) {
+    Project.findById(req.params.id)
+        .exec(function (err, project) {
+            if (err) {
+                throw err;
+            }
+
+            res.contentType(project.image.contentType);
+            res.send(project.image.data);
+
+            //res.send(list_products);
+
+        });
+    // res.send('NOT IMPLEMENTED: Enquiry detail: ' + req.params.id);
 };
