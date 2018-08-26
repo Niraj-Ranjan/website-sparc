@@ -25,10 +25,15 @@ var ProductSchema = new Schema({
         //required: true,
         default:true
     },
-    imagetype: {
-        type:String,
-        max: 10,
-        default: 'png',
+    image: {
+        data: {
+            type: Buffer,   
+        },
+        contentType: {
+            type: String,
+            max: 15,
+            default: 'png'
+        }
     }
     /*categories: [{
         type: Schema.ObjectId,

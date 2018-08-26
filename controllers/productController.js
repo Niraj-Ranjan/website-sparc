@@ -3,9 +3,9 @@
 
 
 
+var fs = require('fs');
 var mime = require('mime');
 var multer = require('multer');
-
 
 
 // -----
@@ -68,17 +68,12 @@ exports.product_detail = function (req, res) {
 // Handle Product create on POST.
 exports.product_create_post = function (req, res) {
     // Create a Book object with escaped and trimmed data.
-    var product = new Product({
-        //name: req.body.product_name,
-        //description: req.body.product_description,
-        //cost: req.body.product_cost
-    });
+    var product = new Product({});
 
 
     var storage = multer.diskStorage({
-        destination: './www/catalog/product',
+        destination: './uploads',
         filename: function (req, file, cb) {
-
             cb(null, product._id + '.' + mime.getExtension(file.mimetype));
         }
     });
@@ -86,6 +81,7 @@ exports.product_create_post = function (req, res) {
     var upload = multer({
         storage: storage
     }).any();
+
 
     upload(req, res, function (err) {
         if (err) {
@@ -99,7 +95,9 @@ exports.product_create_post = function (req, res) {
             product.name = req.body.product_name;
             product.description = req.body.product_description;
             product.cost = req.body.product_cost;
-            product.imagetype = mime.getExtension(req.files[0].mimetype);
+
+            product.image.data = fs.readFileSync(req.files[0].path);
+            product.image.contentType = req.files[0].mimetype;
             //console.log(product);
 
             product.save(function (err) {
@@ -177,8 +175,24 @@ exports.product_update_post = function (req, res) {
         }
     });
 
+};
 
 
 
-    //res.send('NOT IMPLEMENTED: Product update POST. id=' + req.params.id);
+
+// Display detail image for a specific Enquiry.
+exports.product_image_get = function (req, res) {
+    Product.findById(req.params.id)
+        .exec(function (err, product) {
+            if (err) {
+                throw err;
+            }
+
+            res.contentType(product.image.contentType);
+            res.send(product.image.data);
+
+            //res.send(list_products);
+
+        });
+    // res.send('NOT IMPLEMENTED: Enquiry detail: ' + req.params.id);
 };
