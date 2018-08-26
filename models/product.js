@@ -41,13 +41,6 @@ var ProductSchema = new Schema({
     }]*/
 });
 
-// Virtual for product's images
-
-ProductSchema
-    .virtual('imageurl')
-    .get(function () {
-        return '/catalog/product/' + this._id + '.' + this.imagetype;
-    });
 
 //Export model
 module.exports = mongoose.model('Product', ProductSchema);
