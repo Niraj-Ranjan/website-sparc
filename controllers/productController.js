@@ -106,6 +106,12 @@ exports.product_create_post = function (req, res) {
                 }
                 //successful - redirect to new book record.
                 res.redirect('/dashboard/products');
+
+                fs.unlink(req.files[0].path, function (err) {
+                    if (err) {
+                        throw err;
+                    }
+                });
             });
 
             //res.end("File has been uploaded");
