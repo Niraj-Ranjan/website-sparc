@@ -15,7 +15,7 @@ html
                         .collection.with-header
                             each project in projects
                                 a.collection-item.avatar(href='javascript:populate("'+project.id+'")')
-                                    img.circle(src=project.imageurl, alt=project.name)
+                                    img.circle(src='/project/image/'+project.id, alt=project.name)
                                     //- img.circle.materialboxed(src='/images/xxx.jpg', alt=project.name)
                                     span.title.strong.grey-text.text-darken-2 #{project.name}
                                     p.black-text #{project.description}

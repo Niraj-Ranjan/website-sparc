@@ -25,10 +25,15 @@ var ProductSchema = new Schema({
         //required: true,
         default:true
     },
-    imagetype: {
-        type:String,
-        max: 10,
-        default: 'png',
+    image: {
+        data: {
+            type: Buffer,
+        },
+        contentType: {
+            type: String,
+            max: 15,
+            default: 'png'
+        }
     }
     /*categories: [{
         type: Schema.ObjectId,
@@ -36,13 +41,6 @@ var ProductSchema = new Schema({
     }]*/
 });
 
-// Virtual for product's images
-
-ProductSchema
-    .virtual('imageurl')
-    .get(function () {
-        return '/catalog/product/' + this._id + '.' + this.imagetype;
-    });
 
 //Export model
 module.exports = mongoose.model('Product', ProductSchema);
