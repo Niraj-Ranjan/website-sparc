@@ -1,3 +1,3 @@
-particlesJS.load('particle-footer', './particlesjs-config.json', function() {
-  console.log('callback - particles.js config loaded');
+particlesJS.load('particle-footer', '/js/particlesjs-config.json', function () {
+    console.log('callback - particles.js config loaded');
 });
