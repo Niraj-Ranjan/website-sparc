@@ -152,7 +152,7 @@ router.get('/project/:id', project_controller.project_detail);
 // GET request for list of all project.
 router.get('/dashboard/projects', project_controller.project_edit);
 
-router.get('/gallery', project_controller.project_list);
+router.get('/projects', project_controller.project_list);
 
 // GET request for one project image.
 router.get('/project/image/:id', project_controller.project_image_get);
